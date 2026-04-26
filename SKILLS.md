@@ -1,6 +1,6 @@
 # Skills demonstrated in this repo
 
-> *A "human-take agent skill" index — personal-wiki entries for the engineering methodologies this repository uses. Each entry is a self-contained `.md` written to be readable by both humans and CLI/robotic agents that may want to load my skills as context. Inspired by Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) and [autoresearch](https://github.com/karpathy/autoresearch) ideas, applied to hardware engineering practice.*
+> *A human-readable agent-skill index — personal-wiki entries for the engineering methodologies this repository uses. Each entry is a self-contained `.md` written to be readable by both humans and CLI or robotic agents that may want to load my skills as context. Inspired by Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) and [autoresearch](https://github.com/karpathy/autoresearch) ideas, applied to hardware engineering practice.*
 
 ## Acoustics
 

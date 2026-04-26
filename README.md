@@ -40,11 +40,11 @@ Three phases mapping to the three drums:
 - **Phase 2** — Medium drum (bilateral): standard characterization plus the cross-cavity coupling test.
 - **Phase 3** — Large drum: predict each tongue's f₁ from the Phase 1+2 model *before* building, then build, then validate. Success criterion: ≤ 10 cents RMSE.
 
-Full protocol — research questions, variable tables, instrumentation list, analysis plan, and scope notes — is in [`study/README.md`](study/README.md). The data schema (one row per strike) is in [`study/data-template.csv`](study/data-template.csv); raw measurement data will live in [`study/data/`](study/) (forthcoming, after Phase 1 first build).
+Full protocol — research questions, variable tables, instrumentation list, analysis plan, and scope notes — is in [`study/README.md`](study/README.md). The data schema (one row per strike) is in [`study/data-template.csv`](study/data-template.csv); raw measurement data will live under `study/data/` once Phase 1 collection begins.
 
 ## Skills demonstrated
 
-See [`SKILLS.md`](SKILLS.md) — a "human-take agent skill" index. Three skills surface here:
+See [`SKILLS.md`](SKILLS.md) — a human-readable agent-skill index. Three skills surface here:
 
 - **[helmholtz-cavity-resonator](https://github.com/tonykoop/djembe/blob/main/skills/helmholtz-cavity-resonator.md)** *(canonical: djembe)* — bass-tone prediction for a cavity coupled to a port. Phase 2 (bilateral coupling) is built on this model.
 - **`design-of-experiments-for-key-tuning`** *(stub — defined inline in `study/README.md`)* — three-phase characterization framework.

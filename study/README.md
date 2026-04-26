@@ -210,7 +210,7 @@ One row per strike, denormalized — easy for hand entry, normalize later if it 
 ## Cross-references
 
 - **Acoustic-cavity physics** — the Helmholtz model is the same one used for the djembe bass-tone study: [`djembe/README.md`](https://github.com/tonykoop/djembe)
-- **DoE methodology** — same screening-then-focused approach used in my AM tensile-testing R&D work (powder-recipe and laser-parameter studies on SLM 125/250)
+- **DoE methodology** — same screening-then-focused approach used in my AM tensile-testing R&D work (powder-recipe and laser-parameter studies on SLM 125/280)
 
 ## Status
 
