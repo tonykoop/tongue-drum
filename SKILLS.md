@@ -8,7 +8,7 @@
 
 ## Design of experiments
 
-- **`design-of-experiments-for-key-tuning`** *(stub — defined inline in [`study/README.md`](study/README.md))* — A three-phase characterization framework for tongue drum key tuning: noise-floor + species sweep on the small drum, bilateral coupling on the medium drum, predict-and-validate on the large drum. To be extracted as a standalone reusable skill the first time it informs a non-tongue-drum study.
+- **`design-of-experiments-for-key-tuning`** *(stub — defined inline in [`study/README.md`](study/README.md))* — A three-phase characterization framework for tongue drum key tuning: noise-floor + species sweep on the small drum, bilateral coupling on the medium drum, predict-and-validate on the large drum. Methodological cousin to **[astm-e8-tensile-testing](https://github.com/tonykoop/tensile-testing/blob/main/skills/astm-e8-tensile-testing.md)** in the tensile-testing repo: different physics, same habit of deciding variables, responses, and validation criteria before the data starts landing.
 
 ## Cantilever-beam mechanics (stub)
 
