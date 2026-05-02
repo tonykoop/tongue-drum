@@ -1,0 +1,4 @@
+Part #,Part Name,Qty,Finished Dimensions,Rough Stock Dimensions,Material,Grain / Orientation,Source Formula / Drawing,Operation,Yield / Board Ft / Sheet Use,Offcut Notes,Status
+1,Primary blank or shell stock,1,Small (magazine baseline),TBD plus workholding/tuning allowance,Steel or hardwood top,TBD,Design sheet and drawing-brief.md,"Cut to rough size, flatten/square, mark datum",TBD,Reserve offcuts for test cuts and tuning coupons.,Needs dimensions
+2,Fixture or template stock,1 set,TBD,TBD,"MDF, acrylic, plywood, or shop stock",N/A,drawing-brief.md and CAD/CNC setup,Laser/CNC/drill fixture components,TBD,Use offcuts when registration accuracy is not compromised.,Needs fixture design
+3,Test coupons,TBD,Representative tuning/material samples,TBD,Steel or hardwood top,Match production orientation,validation.csv,Cut before final part when tuning or finish risk exists,TBD,Keep labeled with material batch and orientation.,Recommended

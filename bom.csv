@@ -1,0 +1,7 @@
+Item #,Subsystem,Part / Material,Qty,Dimensions / Spec,Material,Make / Buy,Source / Supplier,Estimated Unit Cost,Extended Cost,Drawing Ref,Notes
+1,Primary structure,Tongue drum body/shell/blank,1,Small (magazine baseline),Steel or hardwood top,Make,TBD,,75,drawings/primary-structure.pdf,Populate from design sheet and CAD model.
+2,Sound system,Sound-producing element set,1 set,D minor / A minor,TBD,Make/Buy,TBD,,,drawings/tongue-layout.pdf,"Tongue/slot layout, kerf, bridge geometry, resonator, tuning trim, and strike zones."
+3,Hardware,Hardware and fasteners,1 set,TBD,TBD,Buy,TBD,,,drawings/hardware-layout.pdf,"Bridge, tuning hardware, straps, pins, screws, jacks, or lacing as applicable."
+4,Fixtures,"Jigs, templates, and workholding",1 set,TBD,MDF/acrylic/plywood or shop stock,Make,Shop,,,drawings/fixtures.pdf,"Registration pins, laser templates, CNC spoilboard, bending forms, or lathe supports."
+5,Finish,Finish and consumables,1 set,TBD,Oil/wax/lacquer/adhesive/abrasives,Buy,TBD,,,drawings/finish-notes.md,"Confirm finish is compatible with skin contact, food safety, reeds, strings, or glue."
+6,Validation,Measurement and tuning supplies,1 set,"Tuner, mic, calipers, hygrometer, test fixture",TBD,Buy/Use,Shop/lab,,,data/measurements.csv,"Record target frequency, measured frequency, cents error, humidity, and notes."

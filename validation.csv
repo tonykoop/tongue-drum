@@ -1,0 +1,6 @@
+Check #,Feature / Test,Target,Unit,Tolerance,Source,Measured 1,Measured 2,Measured 3,Environment,Result,Action / Notes
+1,A4 frequency reference,440,Hz,Exact formula sanity check,acoustic-models.md,,,,TBD,,
+2,Overall envelope,Small (magazine baseline),in,TBD,drawing-brief.md,,,,TBD,,
+3,Tongue drum tuning targets,D minor / A minor,Hz/cents,TBD,design sheet,,,,Temp/humidity TBD,,
+4,Critical fit hardware,All purchased/made parts fit,pass/fail,No forced fit,bom.csv and drawings,,,,Shop,,
+5,Finish and contact safety,Compatible with use,pass/fail,No tack/odor/skin issue,sourcing.csv,,,,Shop,,

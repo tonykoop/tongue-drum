@@ -1,0 +1,540 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Tongue Drum Capstone (TNG-001)</title><style>
+body { font-family: Arial, sans-serif; color: #111; line-height: 1.35; max-width: 900px; margin: 32px auto; }
+h1 { font-size: 28px; border-bottom: 2px solid #222; padding-bottom: 6px; }
+h2 { font-size: 22px; margin-top: 28px; }
+h3 { font-size: 18px; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 20px; font-size: 12px; }
+th, td { border: 1px solid #888; padding: 6px; vertical-align: top; }
+th { background: #e8eef8; }
+pre { white-space: pre-wrap; background: #f5f5f5; padding: 10px; border: 1px solid #ddd; }
+.page-break { page-break-before: always; break-before: page; }
+@media print { body { margin: 0.5in; max-width: none; } a { color: #111; } }
+</style></head><body>
+<h1>Tongue Drum Capstone (TNG-001) Print Packet</h1>
+
+<p>Generated: 2026-05-02</p>
+<p>Packet folder: `/sessions/busy-sleepy-volta/mnt/Career/instrument-maker-v2/build-packets/2026-05-02-tng-001-tongue-drum`</p>
+
+<h2>File Map</h2>
+
+<table>
+<tr><th>File</th><th>Purpose</th></tr>
+<tr><td>`design.md`</td><td>Project intent, catalog metadata, assumptions, and validation plan.</td></tr>
+<tr><td>`bom.csv`</td><td>Starter bill of materials with part categories, quantities, drawing refs, and notes.</td></tr>
+<tr><td>`sourcing.csv`</td><td>Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.</td></tr>
+<tr><td>`cut-list.csv`</td><td>Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.</td></tr>
+<tr><td>`drawing-brief.md`</td><td>Manufacturing drawing and technical product sketch brief.</td></tr>
+<tr><td>`assembly-manual.md`</td><td>Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.</td></tr>
+<tr><td>`validation.csv`</td><td>Target/measured values, tolerance, environment, result, and tuning/build action log.</td></tr>
+<tr><td>`supplier-rfq.md`</td><td>Supplier email/request-for-quote starter.</td></tr>
+<tr><td>`visual-bom-brief.md`</td><td>Art direction for an image-forward visual BOM.</td></tr>
+<tr><td>`wolfram-starter.wl`</td><td>Wolfram starter for physics, optimization, visualization, and validation.</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>design.md</h2>
+
+<p>Project intent, catalog metadata, assumptions, and validation plan.</p>
+
+<h1>TNG-001 - Tongue drum</h1>
+
+<p>Generated: 2026-05-02</p>
+
+<h2>Intent</h2>
+
+<p>Create a traceable build packet for `TNG-001` that connects the master catalog row, design sheet, BOM, sourcing, stock prep, validation, assembly, drawing brief, visual BOM brief, Wolfram starter, and CAD/CNC placeholder paths.</p>
+
+<h2>Master Catalog Row</h2>
+
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>Instrument ID</td><td>TNG-001</td></tr>
+<tr><td>Family</td><td>Drums</td></tr>
+<tr><td>Instrument Type</td><td>Tongue drum</td></tr>
+<tr><td>Variant/Size</td><td>Small (magazine baseline)</td></tr>
+<tr><td>Key/Scale</td><td>D minor / A minor</td></tr>
+<tr><td>Design Stage</td><td>Research</td></tr>
+<tr><td>Build Status</td><td>Idea</td></tr>
+<tr><td>Priority</td><td>High</td></tr>
+<tr><td>CAD Design ID</td><td>CAD-TONGUE-12</td></tr>
+<tr><td>CNC Plan ID</td><td>CNC-TONGUE-12</td></tr>
+<tr><td>Primary Material</td><td>Steel or hardwood top</td></tr>
+<tr><td>Target Price</td><td>180</td></tr>
+<tr><td>Estimated Cost</td><td>75</td></tr>
+<tr><td>Estimated Margin</td><td>=IF(OR(M5=&quot;&quot;,N5=&quot;&quot;),&quot;&quot;,M5-N5)</td></tr>
+<tr><td>Maker Nexus Tool</td><td>Maker Nexus laser or CNC router</td></tr>
+<tr><td>Next Step</td><td>Decide steel vs hardwood tongue approach; define tuning cuts</td></tr>
+<tr><td>Notes</td><td>Six-tongue paired-slit design from WOOD magazine Oct 2008. Phase 1 of the key-tuning DoE study.</td></tr>
+<tr><td>GitHub Repo</td><td>https://github.com/tonykoop/tongue-drum</td></tr>
+</table>
+
+<h2>Design Sheet Summary</h2>
+
+<ul>
+<li>Workbook: `/sessions/busy-sleepy-volta/mnt/Career/flutes-staging/Flutes-AI.xlsx`</li>
+<li>Sheet: `Tongue Drum`</li>
+<li>Used range: `A1:W92`</li>
+<li>Cells/formulas/blue inputs: `514` / `222` / `52`</li>
+<li>Formula examples:</li>
+</ul>
+<p>  - `J8`: `=SQRT($B$18*J5/(440*2^((62-69)/12)))`</p>
+<p>  - `K8`: `=J8*25.4`</p>
+<p>  - `N8`: `=SQRT($B$18*N5/(440*2^((55-69)/12)))`</p>
+<p>  - `O8`: `=N8*25.4`</p>
+<p>  - `R8`: `=SQRT($B$18*R5/(440*2^((48-69)/12)))`</p>
+<p>  - `S8`: `=R8*25.4`</p>
+<p>  - `J9`: `=SQRT($B$18*J5/(440*2^((64-69)/12)))`</p>
+<p>  - `N9`: `=SQRT($B$18*N5/(440*2^((57-69)/12)))`</p>
+<p>  - `R9`: `=SQRT($B$18*R5/(440*2^((50-69)/12)))`</p>
+<p>  - `J10`: `=SQRT($B$18*J5/(440*2^((65-69)/12)))`</p>
+<p>  - `N10`: `=SQRT($B$18*N5/(440*2^((59-69)/12)))`</p>
+<p>  - `R10`: `=SQRT($B$18*R5/(440*2^((52-69)/12)))`</p>
+<ul>
+<li>First non-empty rows:</li>
+</ul>
+<p>  - Row 1: Slit-Tongue Drum — CNC Design &amp; DOE Protocol | THREE DRUM DESIGNS</p>
+<p>  - Row 2: Cantilever Beam Model: f = K × t / L²  ·  tonykoop/tongue-drum</p>
+<p>  - Row 3: SMALL (Magazine Baseline)</p>
+<p>  - Row 4: MATERIAL LIBRARY | 6&quot;×9&quot; box, 1/4&quot; top, 8 tongues</p>
+<p>  - Row 5: Wood Species | E (GPa) | ρ (kg/m³) | K (imperial) | Color | Tonewoood Rating | Thickness: | 0.25</p>
+<p>  - Row 6: Padauk | 11 | 745 | 24438 | Red-Orange | ★★★★★</p>
+<p>  - Row 7: Wenge | 15.8 | 870 | 27103 | Dark Brown | ★★★★★ | Note | Length (in)</p>
+<p>  - Row 8: Hard Maple | 12.6 | 705 | 26887 | Cream | ★★★★ | D4 | =SQRT($B$18*J5/(440*2^((62-69)/12)))</p>
+<p>  - Row 9: Cherry | 10.3 | 560 | 27275 | Pink-Brown | ★★★★ | E4 | =SQRT($B$18*J5/(440*2^((64-69)/12)))</p>
+<p>  - Row 10: Black Walnut | 11.6 | 610 | 27734 | Dark Brown | ★★★★ | F4 | =SQRT($B$18*J5/(440*2^((65-69)/12)))</p>
+<p>  - Row 11: White Oak | 12.3 | 770 | 25419 | Tan | ★★★ | G4 | =SQRT($B$18*J5/(440*2^((67-69)/12)))</p>
+<p>  - Row 12: Baltic Birch Ply | 10 | 680 | 24389 | Light Tan | ★★★ | A4 | =SQRT($B$18*J5/(440*2^((69-69)/12)))</p>
+<p>  - Row 13: Mahogany | 10.1 | 590 | 26314 | Reddish | ★★★★ | B4 | =SQRT($B$18*J5/(440*2^((71-69)/12)))</p>
+<p>  - Row 14: Western Red Cedar | 7.7 | 370 | 29013 | Red | ★★★ | C5 | =SQRT($B$18*J5/(440*2^((72-69)/12)))</p>
+
+<h2>Engineering Assumptions To Resolve</h2>
+
+<ul>
+<li>Confirm which dimensions come from formulas, measured builds, supplier drawings, or concept estimates.</li>
+<li>Confirm units, tuning standard, material batch, workholding strategy, and machine envelope.</li>
+<li>Add empirical correction factors or validation measurements before final machining.</li>
+<li>Mark any generated product sketches as communication artifacts unless dimensions are also backed by this packet.</li>
+</ul>
+
+<h2>Build Package Inventory</h2>
+
+<ul>
+<li>`design.md`: design intent, catalog metadata, assumptions, and validation plan.</li>
+<li>`bom.csv`: starter bill of materials with drawing references.</li>
+<li>`sourcing.csv`: supplier/search-term tracker with price/date/lead-time fields.</li>
+<li>`cut-list.csv`: stock, rough/final dimensions, yield, and offcut planning.</li>
+<li>`validation.csv`: target/measured values, environment, result, and action log.</li>
+<li>`assembly-manual.md`: phased build manual with photo placeholders.</li>
+<li>`supplier-rfq.md`: supplier request-for-quote draft.</li>
+<li>`visual-bom-brief.md`: image-forward BOM brief based on Tony&#x27;s Ashiko BOM style.</li>
+<li>`drawing-brief.md`: manufacturing drawing and technical product sketch brief.</li>
+<li>`wolfram-starter.wl`: Wolfram Language starter for physics, optimization, and visualization.</li>
+<li>`cad/`: placeholder for CAD models and design tables.</li>
+<li>`cnc/`: placeholder for CAM, toolpaths, and setup sheets.</li>
+<li>`drawings/`: placeholder for PDFs, SVGs, DXFs, and drawing exports.</li>
+<li>`images/`: placeholder for product sketches, BOM plates, ergonomic views, and renderings.</li>
+<li>`data/`: placeholder for measurements, tuning validation, and DoE logs.</li>
+</ul>
+
+<h2>Placeholder Paths</h2>
+
+<pre><code>
+build-packets/2026-05-02-tng-001-tongue-drum/cad/
+build-packets/2026-05-02-tng-001-tongue-drum/cnc/
+build-packets/2026-05-02-tng-001-tongue-drum/drawings/
+build-packets/2026-05-02-tng-001-tongue-drum/images/
+build-packets/2026-05-02-tng-001-tongue-drum/data/
+</code></pre>
+
+<h2>Validation Plan</h2>
+
+<ul>
+<li>Physics sanity check:</li>
+<li>Critical dimensions checked against design sheet:</li>
+<li>CNC/laser/lathe work envelope check:</li>
+<li>Material and structural check:</li>
+<li>Ergonomic/player check:</li>
+<li>Tuning measurement plan:</li>
+<li>Build photos and revision notes:</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>bom.csv</h2>
+
+<p>Starter bill of materials with part categories, quantities, drawing refs, and notes.</p>
+
+<table>
+<tr><th>Item #</th><th>Subsystem</th><th>Part / Material</th><th>Qty</th><th>Dimensions / Spec</th><th>Material</th><th>Make / Buy</th><th>Source / Supplier</th><th>Estimated Unit Cost</th><th>Extended Cost</th><th>Drawing Ref</th><th>Notes</th></tr>
+<tr><td>1</td><td>Primary structure</td><td>Tongue drum body/shell/blank</td><td>1</td><td>Small (magazine baseline)</td><td>Steel or hardwood top</td><td>Make</td><td>TBD</td><td></td><td>75</td><td>drawings/primary-structure.pdf</td><td>Populate from design sheet and CAD model.</td></tr>
+<tr><td>2</td><td>Sound system</td><td>Sound-producing element set</td><td>1 set</td><td>D minor / A minor</td><td>TBD</td><td>Make/Buy</td><td>TBD</td><td></td><td></td><td>drawings/tongue-layout.pdf</td><td>Tongue/slot layout, kerf, bridge geometry, resonator, tuning trim, and strike zones.</td></tr>
+<tr><td>3</td><td>Hardware</td><td>Hardware and fasteners</td><td>1 set</td><td>TBD</td><td>TBD</td><td>Buy</td><td>TBD</td><td></td><td></td><td>drawings/hardware-layout.pdf</td><td>Bridge, tuning hardware, straps, pins, screws, jacks, or lacing as applicable.</td></tr>
+<tr><td>4</td><td>Fixtures</td><td>Jigs, templates, and workholding</td><td>1 set</td><td>TBD</td><td>MDF/acrylic/plywood or shop stock</td><td>Make</td><td>Shop</td><td></td><td></td><td>drawings/fixtures.pdf</td><td>Registration pins, laser templates, CNC spoilboard, bending forms, or lathe supports.</td></tr>
+<tr><td>5</td><td>Finish</td><td>Finish and consumables</td><td>1 set</td><td>TBD</td><td>Oil/wax/lacquer/adhesive/abrasives</td><td>Buy</td><td>TBD</td><td></td><td></td><td>drawings/finish-notes.md</td><td>Confirm finish is compatible with skin contact, food safety, reeds, strings, or glue.</td></tr>
+<tr><td>6</td><td>Validation</td><td>Measurement and tuning supplies</td><td>1 set</td><td>Tuner, mic, calipers, hygrometer, test fixture</td><td>TBD</td><td>Buy/Use</td><td>Shop/lab</td><td></td><td></td><td>data/measurements.csv</td><td>Record target frequency, measured frequency, cents error, humidity, and notes.</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>sourcing.csv</h2>
+
+<p>Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.</p>
+
+<table>
+<tr><th>Item #</th><th>Category</th><th>Component</th><th>Required Spec</th><th>Qty Estimate</th><th>Unit</th><th>Search Terms</th><th>Supplier Candidate</th><th>Current Unit Price</th><th>Date Checked</th><th>Lead Time</th><th>Acceptable Substitutes</th><th>Risk / Notes</th><th>Status</th></tr>
+<tr><td>1</td><td>Primary material</td><td>Main body/shell/blank stock</td><td>Small (magazine baseline)</td><td>TBD</td><td>ea/bd ft/sheet</td><td>Tongue drum Steel or hardwood top stock lumber blank shell</td><td>TBD</td><td></td><td></td><td></td><td>Equivalent material with matching acoustic, structural, and machining requirements.</td><td>Confirm dimensions, grade, moisture, defects, and shipping size.</td><td>Needs sourcing</td></tr>
+<tr><td>2</td><td>Hardware</td><td>Instrument-specific hardware set</td><td>TBD from drawing and assembly method</td><td>1</td><td>set</td><td>Tongue drum hardware parts kit</td><td>TBD</td><td></td><td></td><td></td><td>Compatible hardware with same critical dimensions.</td><td>Do not buy until drawings identify hole spacing, thread, and clearances.</td><td>Needs sourcing</td></tr>
+<tr><td>3</td><td>Consumables</td><td>Adhesives, abrasives, finish, and shop supplies</td><td>Skin/contact-safe finish where applicable</td><td>1</td><td>set</td><td>instrument finish adhesive sandpaper wax oil lacquer</td><td>TBD</td><td></td><td></td><td></td><td>Equivalent finish compatible with material and player contact.</td><td>Confirm finish does not inhibit tuning, glue, reeds, or skin contact.</td><td>Needs sourcing</td></tr>
+<tr><td>4</td><td>Validation</td><td>Measurement and tuning tools</td><td>Tuner, microphone, calipers, hygrometer, scale</td><td>1</td><td>set</td><td>instrument tuner measurement microphone calipers hygrometer</td><td>Shop/lab</td><td></td><td></td><td></td><td>Existing shop tools acceptable if calibrated enough for the task.</td><td>Record tool/model in validation notes.</td><td>Check inventory</td></tr>
+<tr><td>5</td><td>Sound plate</td><td>Tongue plate or soundboard</td><td>Material, thickness, kerf, tuning allowance</td><td>TBD</td><td>TBD</td><td>steel tongue drum blank hardwood tongue drum soundboard</td><td>TBD</td><td></td><td></td><td></td><td>TBD after spec review</td><td>Frequency depends strongly on thickness, slot geometry, and material batch.</td><td>Needs sourcing</td></tr>
+<tr><td>6</td><td>Resonator</td><td>Box, shell, or resonant body stock</td><td>Envelope, wall thickness, port/cavity requirements</td><td>TBD</td><td>TBD</td><td>tongue drum resonator box hardwood shell steel shell</td><td>TBD</td><td></td><td></td><td></td><td>TBD after spec review</td><td>Confirm coupling and access before final glue/weld.</td><td>Needs sourcing</td></tr>
+<tr><td>7</td><td>Shop service</td><td>Laser/CNC cutting or routing</td><td>Kerf, minimum slot width, tab/fixture method</td><td>TBD</td><td>TBD</td><td>laser cut steel tongue drum CNC route tongue slots</td><td>TBD</td><td></td><td></td><td></td><td>TBD after spec review</td><td>Cut quality affects tuning and crack initiation.</td><td>Needs sourcing</td></tr>
+<tr><td>8</td><td>Accessories</td><td>Feet, mallets, pads, or dampers</td><td>Hardness, contact-safe material, size</td><td>TBD</td><td>TBD</td><td>rubber feet mallets tongue drum pads dampers</td><td>TBD</td><td></td><td></td><td></td><td>TBD after spec review</td><td>Small accessories affect sustain, rattle, and player experience.</td><td>Needs sourcing</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>cut-list.csv</h2>
+
+<p>Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.</p>
+
+<table>
+<tr><th>Part #</th><th>Part Name</th><th>Qty</th><th>Finished Dimensions</th><th>Rough Stock Dimensions</th><th>Material</th><th>Grain / Orientation</th><th>Source Formula / Drawing</th><th>Operation</th><th>Yield / Board Ft / Sheet Use</th><th>Offcut Notes</th><th>Status</th></tr>
+<tr><td>1</td><td>Primary blank or shell stock</td><td>1</td><td>Small (magazine baseline)</td><td>TBD plus workholding/tuning allowance</td><td>Steel or hardwood top</td><td>TBD</td><td>Design sheet and drawing-brief.md</td><td>Cut to rough size, flatten/square, mark datum</td><td>TBD</td><td>Reserve offcuts for test cuts and tuning coupons.</td><td>Needs dimensions</td></tr>
+<tr><td>2</td><td>Fixture or template stock</td><td>1 set</td><td>TBD</td><td>TBD</td><td>MDF, acrylic, plywood, or shop stock</td><td>N/A</td><td>drawing-brief.md and CAD/CNC setup</td><td>Laser/CNC/drill fixture components</td><td>TBD</td><td>Use offcuts when registration accuracy is not compromised.</td><td>Needs fixture design</td></tr>
+<tr><td>3</td><td>Test coupons</td><td>TBD</td><td>Representative tuning/material samples</td><td>TBD</td><td>Steel or hardwood top</td><td>Match production orientation</td><td>validation.csv</td><td>Cut before final part when tuning or finish risk exists</td><td>TBD</td><td>Keep labeled with material batch and orientation.</td><td>Recommended</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>drawing-brief.md</h2>
+
+<p>Manufacturing drawing and technical product sketch brief.</p>
+
+<h1>Instrument Drawing Brief</h1>
+
+<p>Instrument: Tongue drum</p>
+<p>Instrument ID: TNG-001</p>
+<p>Variant/size: Small (magazine baseline)</p>
+<p>Key/scale: D minor / A minor</p>
+<p>Revision/date: REV-A / 2026-05-02</p>
+<p>Units: inches unless noted</p>
+<p>Scale: TBD</p>
+<p>Source workbook/CAD/catalog ID: TBD / CAD-TONGUE-12</p>
+
+<h2>Required Views</h2>
+
+<ul>
+<li>Plan:</li>
+<li>Side/front:</li>
+<li>Section:</li>
+<li>Detail:</li>
+<li>Exploded/BOM:</li>
+<li>Ergonomic/player:</li>
+</ul>
+
+<h2>Technical Product Sketch</h2>
+
+<p>Use a technical-leaning concept sketch when the design needs a fast shared picture of scale, resources, size, character, material choices, and interaction. It may combine a hero 3D view, small orthographic insets, material swatches, callout labels, a simple scale figure/hand reference, and resource/BOM badges.</p>
+
+<p>Rules:</p>
+
+<ul>
+<li>Use only known dimensions from the design sheet or mark values as `TBD`.</li>
+<li>Include scale cues, but do not infer final geometry from the sketch.</li>
+<li>Show material intent clearly: wood species, metal, skin/head, strings, ceramic, finish, or hardware.</li>
+<li>Prefer clean information-board layouts for communication: engineering poster, magazine-style explainer, reference sheet, or storyboard/process board.</li>
+<li>Keep build-critical geometry in vector/CAD drawings.</li>
+</ul>
+
+<h2>Critical Dimensions</h2>
+
+<table>
+<tr><th>Feature</th><th>Dimension</th><th>Tolerance</th><th>Source</th><th>Notes</th></tr>
+<tr><td>Overall envelope</td><td>TBD</td><td>TBD</td><td>Design sheet/CAD</td><td></td></tr>
+<tr><td>Primary datum/centerline</td><td>TBD</td><td>TBD</td><td>CAD</td><td></td></tr>
+<tr><td>Tuning-critical geometry</td><td>TBD</td><td>TBD</td><td>Formula/measurement</td><td></td></tr>
+<tr><td>Workholding datum</td><td>TBD</td><td>TBD</td><td>CNC setup</td><td></td></tr>
+</table>
+
+<h2>Materials And Finish</h2>
+
+<table>
+<tr><th>Part</th><th>Material/spec</th><th>Grain/orientation</th><th>Finish</th><th>Notes</th></tr>
+<tr><td>Primary structure</td><td>Steel or hardwood top</td><td>TBD</td><td>TBD</td><td></td></tr>
+<tr><td>Sound-producing element</td><td>TBD</td><td>TBD</td><td>TBD</td><td></td></tr>
+<tr><td>Hardware/fixtures</td><td>TBD</td><td>N/A</td><td>TBD</td><td></td></tr>
+</table>
+
+<h2>Manufacturing Notes</h2>
+
+<ul>
+<li>Stock:</li>
+<li>Workholding:</li>
+<li>Tooling:</li>
+<li>Operation sequence:</li>
+<li>Kerf/bit-radius compensation:</li>
+<li>Trim/tuning allowance:</li>
+</ul>
+
+<h2>Design Sheet Context</h2>
+
+<ul>
+<li>Workbook: `/sessions/busy-sleepy-volta/mnt/Career/flutes-staging/Flutes-AI.xlsx`</li>
+<li>Sheet: `Tongue Drum`</li>
+<li>Used range: `A1:W92`</li>
+<li>Cells/formulas/blue inputs: `514` / `222` / `52`</li>
+<li>Formula examples:</li>
+</ul>
+<p>  - `J8`: `=SQRT($B$18*J5/(440*2^((62-69)/12)))`</p>
+<p>  - `K8`: `=J8*25.4`</p>
+<p>  - `N8`: `=SQRT($B$18*N5/(440*2^((55-69)/12)))`</p>
+<p>  - `O8`: `=N8*25.4`</p>
+<p>  - `R8`: `=SQRT($B$18*R5/(440*2^((48-69)/12)))`</p>
+<p>  - `S8`: `=R8*25.4`</p>
+<p>  - `J9`: `=SQRT($B$18*J5/(440*2^((64-69)/12)))`</p>
+<p>  - `N9`: `=SQRT($B$18*N5/(440*2^((57-69)/12)))`</p>
+<p>  - `R9`: `=SQRT($B$18*R5/(440*2^((50-69)/12)))`</p>
+<p>  - `J10`: `=SQRT($B$18*J5/(440*2^((65-69)/12)))`</p>
+<p>  - `N10`: `=SQRT($B$18*N5/(440*2^((59-69)/12)))`</p>
+<p>  - `R10`: `=SQRT($B$18*R5/(440*2^((52-69)/12)))`</p>
+<ul>
+<li>First non-empty rows:</li>
+</ul>
+<p>  - Row 1: Slit-Tongue Drum — CNC Design &amp; DOE Protocol | THREE DRUM DESIGNS</p>
+<p>  - Row 2: Cantilever Beam Model: f = K × t / L²  ·  tonykoop/tongue-drum</p>
+<p>  - Row 3: SMALL (Magazine Baseline)</p>
+<p>  - Row 4: MATERIAL LIBRARY | 6&quot;×9&quot; box, 1/4&quot; top, 8 tongues</p>
+<p>  - Row 5: Wood Species | E (GPa) | ρ (kg/m³) | K (imperial) | Color | Tonewoood Rating | Thickness: | 0.25</p>
+<p>  - Row 6: Padauk | 11 | 745 | 24438 | Red-Orange | ★★★★★</p>
+<p>  - Row 7: Wenge | 15.8 | 870 | 27103 | Dark Brown | ★★★★★ | Note | Length (in)</p>
+<p>  - Row 8: Hard Maple | 12.6 | 705 | 26887 | Cream | ★★★★ | D4 | =SQRT($B$18*J5/(440*2^((62-69)/12)))</p>
+<p>  - Row 9: Cherry | 10.3 | 560 | 27275 | Pink-Brown | ★★★★ | E4 | =SQRT($B$18*J5/(440*2^((64-69)/12)))</p>
+<p>  - Row 10: Black Walnut | 11.6 | 610 | 27734 | Dark Brown | ★★★★ | F4 | =SQRT($B$18*J5/(440*2^((65-69)/12)))</p>
+<p>  - Row 11: White Oak | 12.3 | 770 | 25419 | Tan | ★★★ | G4 | =SQRT($B$18*J5/(440*2^((67-69)/12)))</p>
+<p>  - Row 12: Baltic Birch Ply | 10 | 680 | 24389 | Light Tan | ★★★ | A4 | =SQRT($B$18*J5/(440*2^((69-69)/12)))</p>
+<p>  - Row 13: Mahogany | 10.1 | 590 | 26314 | Reddish | ★★★★ | B4 | =SQRT($B$18*J5/(440*2^((71-69)/12)))</p>
+<p>  - Row 14: Western Red Cedar | 7.7 | 370 | 29013 | Red | ★★★ | C5 | =SQRT($B$18*J5/(440*2^((72-69)/12)))</p>
+
+<h2>Assumptions / TBDs</h2>
+
+<p>-</p>
+
+<div class="page-break"></div>
+
+<h2>assembly-manual.md</h2>
+
+<p>Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.</p>
+
+<h1>Assembly Manual</h1>
+
+<p>Instrument ID: TNG-001</p>
+<p>Instrument: Tongue drum</p>
+<p>Revision/date: REV-A / 2026-05-02</p>
+
+<h2>Before You Start</h2>
+
+<ul>
+<li>Confirm `design.md`, `bom.csv`, `sourcing.csv`, `cut-list.csv`, `drawing-brief.md`, and `validation.csv` agree.</li>
+<li>Confirm all purchased hardware dimensions against drawings before cutting irreversible features.</li>
+<li>Photograph each major setup and save images in `images/`.</li>
+</ul>
+
+<h2>Tools And Fixtures</h2>
+
+<ul>
+<li>CNC / laser / lathe / hand tools:</li>
+<li>Measuring tools:</li>
+<li>Workholding and fixtures:</li>
+<li>Safety equipment:</li>
+</ul>
+
+<h2>Build Phases</h2>
+
+<p>1. Source and inspect materials.</p>
+<p>2. Prepare rough stock and test coupons.</p>
+<p>3. Build fixtures/templates and verify datums.</p>
+<p>4. Machine or form primary parts.</p>
+<p>5. Dry fit hardware and sound-producing elements.</p>
+<p>6. Assemble with reversible checks where possible.</p>
+<p>7. Tune, trim, tension, or adjust.</p>
+<p>8. Finish, cure, and re-check tuning/fit.</p>
+<p>9. Document final measurements and build notes.</p>
+
+<h2>Photo / Diagram Placeholders</h2>
+
+<ul>
+<li>`images/01-materials.jpg`</li>
+<li>`images/02-fixture-setup.jpg`</li>
+<li>`images/03-machining.jpg`</li>
+<li>`images/04-dry-fit.jpg`</li>
+<li>`images/05-assembly.jpg`</li>
+<li>`images/06-validation.jpg`</li>
+</ul>
+
+<h2>Maintenance / Setup Notes</h2>
+
+<ul>
+<li>Tuning/setup:</li>
+<li>Seasonal humidity/temperature notes:</li>
+<li>Replaceable wear parts:</li>
+<li>Storage and transport:</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>validation.csv</h2>
+
+<p>Target/measured values, tolerance, environment, result, and tuning/build action log.</p>
+
+<table>
+<tr><th>Check #</th><th>Feature / Test</th><th>Target</th><th>Unit</th><th>Tolerance</th><th>Source</th><th>Measured 1</th><th>Measured 2</th><th>Measured 3</th><th>Environment</th><th>Result</th><th>Action / Notes</th></tr>
+<tr><td>1</td><td>A4 frequency reference</td><td>440</td><td>Hz</td><td>Exact formula sanity check</td><td>acoustic-models.md</td><td></td><td></td><td></td><td>TBD</td><td></td><td></td></tr>
+<tr><td>2</td><td>Overall envelope</td><td>Small (magazine baseline)</td><td>in</td><td>TBD</td><td>drawing-brief.md</td><td></td><td></td><td></td><td>TBD</td><td></td><td></td></tr>
+<tr><td>3</td><td>Tongue drum tuning targets</td><td>D minor / A minor</td><td>Hz/cents</td><td>TBD</td><td>design sheet</td><td></td><td></td><td></td><td>Temp/humidity TBD</td><td></td><td></td></tr>
+<tr><td>4</td><td>Critical fit hardware</td><td>All purchased/made parts fit</td><td>pass/fail</td><td>No forced fit</td><td>bom.csv and drawings</td><td></td><td></td><td></td><td>Shop</td><td></td><td></td></tr>
+<tr><td>5</td><td>Finish and contact safety</td><td>Compatible with use</td><td>pass/fail</td><td>No tack/odor/skin issue</td><td>sourcing.csv</td><td></td><td></td><td></td><td>Shop</td><td></td><td></td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<h2>supplier-rfq.md</h2>
+
+<p>Supplier email/request-for-quote starter.</p>
+
+<h1>Supplier RFQ Draft</h1>
+
+<p>Subject: RFQ for Tongue drum prototype components - TNG-001</p>
+
+<p>Hello,</p>
+
+<p>I am sourcing components for a musical-instrument prototype:</p>
+
+<ul>
+<li>Instrument: Tongue drum</li>
+<li>Variant/size: Small (magazine baseline)</li>
+<li>Key/scale: D minor / A minor</li>
+<li>Primary material: Steel or hardwood top</li>
+</ul>
+
+<p>Could you quote the items listed in `sourcing.csv` or recommend compatible alternatives?</p>
+
+<p>Please include:</p>
+
+<ul>
+<li>Unit price and any volume breaks</li>
+<li>Minimum order quantity</li>
+<li>Current stock status</li>
+<li>Lead time</li>
+<li>Shipping estimate to my location</li>
+<li>Material/spec sheet or drawing if available</li>
+<li>Notes on acceptable substitutions or constraints</li>
+</ul>
+
+<p>Thank you,</p>
+
+<p>Tony</p>
+
+<div class="page-break"></div>
+
+<h2>visual-bom-brief.md</h2>
+
+<p>Art direction for an image-forward visual BOM.</p>
+
+<h1>Visual BOM Brief</h1>
+
+<p>Instrument ID: TNG-001</p>
+<p>Instrument: Tongue drum</p>
+<p>Revision/date: REV-A / 2026-05-02</p>
+
+<h2>Reference Style</h2>
+
+<p>Use Tony&#x27;s Ashiko visual BOM as the preferred pattern:</p>
+
+<pre><code>
+C:/Users/Tony/Documents/GitHub/ashiko-drum-workshop/images/figure-bom-v2.png
+/mnt/c/Users/Tony/Documents/GitHub/ashiko-drum-workshop/images/figure-bom-v2.png
+</code></pre>
+
+<h2>Layout</h2>
+
+<ul>
+<li>Header: assembly name, quote date, estimated cost, revision.</li>
+<li>Hero image: finished assembly or best current render/photo.</li>
+<li>Main table columns: Part #, Part Name, Description, Qty, Units, Picture, Cost Each, Total.</li>
+<li>Alternating row fills for readability.</li>
+<li>Bottom notes: supplier assumptions, material species, discounts, substitutions, and TBDs.</li>
+</ul>
+
+<h2>Image Rules</h2>
+
+<ul>
+<li>Prefer real part photos, supplier images, CAD renders, or shop photos.</li>
+<li>Generated part images are allowed as placeholders, but label them as concept/placeholder.</li>
+<li>Keep image thumbnails consistent in crop and scale where possible.</li>
+<li>Do not infer dimensions from generated images.</li>
+</ul>
+
+<h2>Needed Images</h2>
+
+<ul>
+<li>Finished assembly / hero:</li>
+<li>Primary material:</li>
+<li>Sound-producing elements:</li>
+<li>Hardware:</li>
+<li>Rope/lacing/strings/reeds/skin/head:</li>
+<li>Finish/consumables:</li>
+<li>Fixtures/templates:</li>
+</ul>
+
+<h2>Output Targets</h2>
+
+<ul>
+<li>`images/visual-bom.png`</li>
+<li>`images/visual-bom.pdf`</li>
+<li>Source workbook/sheet or editable design file:</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>wolfram-starter.wl</h2>
+
+<p>Wolfram starter for physics, optimization, visualization, and validation.</p>
+
+<pre><code>
+(* Instrument-maker build-packet Wolfram starter. *)
+
+ClearAll[&quot;Global`*&quot;];
+
+design = &lt;|
+  &quot;InstrumentID&quot; -&gt; &quot;TNG-001&quot;,
+  &quot;Family&quot; -&gt; &quot;Drums&quot;,
+  &quot;InstrumentType&quot; -&gt; &quot;Tongue drum&quot;,
+  &quot;VariantSize&quot; -&gt; &quot;Small (magazine baseline)&quot;,
+  &quot;KeyScale&quot; -&gt; &quot;D minor / A minor&quot;,
+  &quot;PrimaryMaterial&quot; -&gt; &quot;Steel or hardwood top&quot;,
+  &quot;DesignSheet&quot; -&gt; &quot;Tongue Drum&quot;,
+  &quot;DesignWorkbook&quot; -&gt; &quot;/sessions/busy-sleepy-volta/mnt/Career/flutes-staging/Flutes-AI.xlsx&quot;,
+  &quot;Units&quot; -&gt; &quot;Imperial&quot;,
+  &quot;A4&quot; -&gt; 440,
+  &quot;SpeedOfSoundInPerSec&quot; -&gt; 13552
+|&gt;;
+
+frequencyFromMidi[midi_, a4_: 440] := a4*2^((midi - 69)/12);
+centsError[measured_, target_] := 1200*Log2[measured/target];
+openPipeLengthIn[freq_, c_: 13552, radius_: 0] := c/(2*freq) - 2*0.6*radius;
+stoppedPipeLengthIn[freq_, c_: 13552, radius_: 0] := c/(4*freq) - 0.6*radius;
+cantileverLengthIn[freq_, thickness_, k_] := Sqrt[k*thickness/freq];
+
+CreateDocument[
+  {
+    TextCell[design[&quot;InstrumentID&quot;] &lt;&gt; &quot; - &quot; &lt;&gt; design[&quot;InstrumentType&quot;], &quot;Title&quot;],
+    TextCell[&quot;Build-packet computational design notebook&quot;, &quot;Subtitle&quot;],
+    ExpressionCell[design, &quot;Input&quot;],
+    TextCell[&quot;Add imported design rows, Manipulate controls, plots, audio, 3D geometry, and validation cells below.&quot;, &quot;Text&quot;]
+  },
+  WindowTitle -&gt; design[&quot;InstrumentID&quot;]
+]
+</code></pre>
+</body></html>
