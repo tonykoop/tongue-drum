@@ -8,7 +8,7 @@ Revision/date: REV-A / 2026-05-02
 
 - Confirm `design.md`, `bom.csv`, `sourcing.csv`, `cut-list.csv`, `drawing-brief.md`, and `validation.csv` agree.
 - Confirm all purchased hardware dimensions against drawings before cutting irreversible features.
-- Photograph each major setup and save images in `images/`.
+- Photograph each major setup and save images in `../../assets/images/`.
 
 ## Tools And Fixtures
 
@@ -31,12 +31,12 @@ Revision/date: REV-A / 2026-05-02
 
 ## Photo / Diagram Placeholders
 
-- `images/01-materials.jpg`
-- `images/02-fixture-setup.jpg`
-- `images/03-machining.jpg`
-- `images/04-dry-fit.jpg`
-- `images/05-assembly.jpg`
-- `images/06-validation.jpg`
+- `../../assets/images/01-materials.jpg`
+- `../../assets/images/02-fixture-setup.jpg`
+- `../../assets/images/03-machining.jpg`
+- `../../assets/images/04-dry-fit.jpg`
+- `../../assets/images/05-assembly.jpg`
+- `../../assets/images/06-validation.jpg`
 
 ## Maintenance / Setup Notes
 

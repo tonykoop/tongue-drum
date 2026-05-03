@@ -83,20 +83,20 @@ Create a traceable build packet for `TNG-001` that connects the master catalog r
 - `visual-bom-brief.md`: image-forward BOM brief based on Tony's Ashiko BOM style.
 - `drawing-brief.md`: manufacturing drawing and technical product sketch brief.
 - `wolfram-starter.wl`: Wolfram Language starter for physics, optimization, and visualization.
-- `cad/`: placeholder for CAD models and design tables.
-- `cnc/`: placeholder for CAM, toolpaths, and setup sheets.
-- `drawings/`: placeholder for PDFs, SVGs, DXFs, and drawing exports.
-- `images/`: placeholder for product sketches, BOM plates, ergonomic views, and renderings.
-- `data/`: placeholder for measurements, tuning validation, and DoE logs.
+- `../cad/`: placeholder for CAD models and design tables.
+- `../cnc/`: placeholder for CAM, toolpaths, and setup sheets.
+- `../drawings/`: placeholder for PDFs, SVGs, DXFs, and drawing exports.
+- `../../assets/images/`: placeholder for product sketches, BOM plates, ergonomic views, and renderings.
+- `../data/`: placeholder for measurements, tuning validation, and DoE logs.
 
 ## Placeholder Paths
 
 ```text
-build-packets/2026-05-02-tng-001-tongue-drum/cad/
-build-packets/2026-05-02-tng-001-tongue-drum/cnc/
-build-packets/2026-05-02-tng-001-tongue-drum/drawings/
-build-packets/2026-05-02-tng-001-tongue-drum/images/
-build-packets/2026-05-02-tng-001-tongue-drum/data/
+build-packets/2026-05-02-tng-001-tongue-drum/../cad/
+build-packets/2026-05-02-tng-001-tongue-drum/../cnc/
+build-packets/2026-05-02-tng-001-tongue-drum/../drawings/
+build-packets/2026-05-02-tng-001-tongue-drum/../../assets/images/
+build-packets/2026-05-02-tng-001-tongue-drum/../data/
 ```
 
 ## Validation Plan

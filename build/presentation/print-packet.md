@@ -7,20 +7,20 @@ Packet folder: `/sessions/busy-sleepy-volta/mnt/Career/instrument-maker-v2/build
 
 | File | Purpose |
 | --- | --- |
-| `design.md` | Project intent, catalog metadata, assumptions, and validation plan. |
-| `bom.csv` | Starter bill of materials with part categories, quantities, drawing refs, and notes. |
-| `sourcing.csv` | Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks. |
-| `cut-list.csv` | Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts. |
-| `drawing-brief.md` | Manufacturing drawing and technical product sketch brief. |
-| `assembly-manual.md` | Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes. |
-| `validation.csv` | Target/measured values, tolerance, environment, result, and tuning/build action log. |
-| `supplier-rfq.md` | Supplier email/request-for-quote starter. |
-| `visual-bom-brief.md` | Art direction for an image-forward visual BOM. |
-| `wolfram-starter.wl` | Wolfram starter for physics, optimization, visualization, and validation. |
+| `../packet/design.md` | Project intent, catalog metadata, assumptions, and validation plan. |
+| `../packet/bom.csv` | Starter bill of materials with part categories, quantities, drawing refs, and notes. |
+| `../packet/sourcing.csv` | Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks. |
+| `../packet/cut-list.csv` | Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts. |
+| `../packet/drawing-brief.md` | Manufacturing drawing and technical product sketch brief. |
+| `../packet/assembly-manual.md` | Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes. |
+| `../packet/validation.csv` | Target/measured values, tolerance, environment, result, and tuning/build action log. |
+| `../packet/supplier-rfq.md` | Supplier email/request-for-quote starter. |
+| `../packet/visual-bom-brief.md` | Art direction for an image-forward visual BOM. |
+| `../packet/wolfram-starter.wl` | Wolfram starter for physics, optimization, visualization, and validation. |
 
 <div class="page-break"></div>
 
-## design.md
+## ../packet/design.md
 
 Project intent, catalog metadata, assumptions, and validation plan.
 
@@ -99,30 +99,30 @@ Create a traceable build packet for `TNG-001` that connects the master catalog r
 
 ## Build Package Inventory
 
-- `design.md`: design intent, catalog metadata, assumptions, and validation plan.
-- `bom.csv`: starter bill of materials with drawing references.
-- `sourcing.csv`: supplier/search-term tracker with price/date/lead-time fields.
-- `cut-list.csv`: stock, rough/final dimensions, yield, and offcut planning.
-- `validation.csv`: target/measured values, environment, result, and action log.
-- `assembly-manual.md`: phased build manual with photo placeholders.
-- `supplier-rfq.md`: supplier request-for-quote draft.
-- `visual-bom-brief.md`: image-forward BOM brief based on Tony's Ashiko BOM style.
-- `drawing-brief.md`: manufacturing drawing and technical product sketch brief.
-- `wolfram-starter.wl`: Wolfram Language starter for physics, optimization, and visualization.
-- `cad/`: placeholder for CAD models and design tables.
-- `cnc/`: placeholder for CAM, toolpaths, and setup sheets.
-- `drawings/`: placeholder for PDFs, SVGs, DXFs, and drawing exports.
-- `images/`: placeholder for product sketches, BOM plates, ergonomic views, and renderings.
-- `data/`: placeholder for measurements, tuning validation, and DoE logs.
+- `../packet/design.md`: design intent, catalog metadata, assumptions, and validation plan.
+- `../packet/bom.csv`: starter bill of materials with drawing references.
+- `../packet/sourcing.csv`: supplier/search-term tracker with price/date/lead-time fields.
+- `../packet/cut-list.csv`: stock, rough/final dimensions, yield, and offcut planning.
+- `../packet/validation.csv`: target/measured values, environment, result, and action log.
+- `../packet/assembly-manual.md`: phased build manual with photo placeholders.
+- `../packet/supplier-rfq.md`: supplier request-for-quote draft.
+- `../packet/visual-bom-brief.md`: image-forward BOM brief based on Tony's Ashiko BOM style.
+- `../packet/drawing-brief.md`: manufacturing drawing and technical product sketch brief.
+- `../packet/wolfram-starter.wl`: Wolfram Language starter for physics, optimization, and visualization.
+- `../cad/`: placeholder for CAD models and design tables.
+- `../cnc/`: placeholder for CAM, toolpaths, and setup sheets.
+- `../drawings/`: placeholder for PDFs, SVGs, DXFs, and drawing exports.
+- `../../assets/images/`: placeholder for product sketches, BOM plates, ergonomic views, and renderings.
+- `../data/`: placeholder for measurements, tuning validation, and DoE logs.
 
 ## Placeholder Paths
 
 ```text
-build-packets/2026-05-02-tng-001-tongue-drum/cad/
-build-packets/2026-05-02-tng-001-tongue-drum/cnc/
-build-packets/2026-05-02-tng-001-tongue-drum/drawings/
-build-packets/2026-05-02-tng-001-tongue-drum/images/
-build-packets/2026-05-02-tng-001-tongue-drum/data/
+build-packets/2026-05-02-tng-001-tongue-drum/../cad/
+build-packets/2026-05-02-tng-001-tongue-drum/../cnc/
+build-packets/2026-05-02-tng-001-tongue-drum/../drawings/
+build-packets/2026-05-02-tng-001-tongue-drum/../../assets/images/
+build-packets/2026-05-02-tng-001-tongue-drum/../data/
 ```
 
 ## Validation Plan
@@ -137,22 +137,22 @@ build-packets/2026-05-02-tng-001-tongue-drum/data/
 
 <div class="page-break"></div>
 
-## bom.csv
+## ../packet/bom.csv
 
 Starter bill of materials with part categories, quantities, drawing refs, and notes.
 
 | Item # | Subsystem | Part / Material | Qty | Dimensions / Spec | Material | Make / Buy | Source / Supplier | Estimated Unit Cost | Extended Cost | Drawing Ref | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Primary structure | Tongue drum body/shell/blank | 1 | Small (magazine baseline) | Steel or hardwood top | Make | TBD |  | 75 | drawings/primary-structure.pdf | Populate from design sheet and CAD model. |
-| 2 | Sound system | Sound-producing element set | 1 set | D minor / A minor | TBD | Make/Buy | TBD |  |  | drawings/tongue-layout.pdf | Tongue/slot layout, kerf, bridge geometry, resonator, tuning trim, and strike zones. |
-| 3 | Hardware | Hardware and fasteners | 1 set | TBD | TBD | Buy | TBD |  |  | drawings/hardware-layout.pdf | Bridge, tuning hardware, straps, pins, screws, jacks, or lacing as applicable. |
-| 4 | Fixtures | Jigs, templates, and workholding | 1 set | TBD | MDF/acrylic/plywood or shop stock | Make | Shop |  |  | drawings/fixtures.pdf | Registration pins, laser templates, CNC spoilboard, bending forms, or lathe supports. |
-| 5 | Finish | Finish and consumables | 1 set | TBD | Oil/wax/lacquer/adhesive/abrasives | Buy | TBD |  |  | drawings/finish-notes.md | Confirm finish is compatible with skin contact, food safety, reeds, strings, or glue. |
-| 6 | Validation | Measurement and tuning supplies | 1 set | Tuner, mic, calipers, hygrometer, test fixture | TBD | Buy/Use | Shop/lab |  |  | data/measurements.csv | Record target frequency, measured frequency, cents error, humidity, and notes. |
+| 1 | Primary structure | Tongue drum body/shell/blank | 1 | Small (magazine baseline) | Steel or hardwood top | Make | TBD |  | 75 | ../drawings/primary-structure.pdf | Populate from design sheet and CAD model. |
+| 2 | Sound system | Sound-producing element set | 1 set | D minor / A minor | TBD | Make/Buy | TBD |  |  | ../drawings/tongue-layout.pdf | Tongue/slot layout, kerf, bridge geometry, resonator, tuning trim, and strike zones. |
+| 3 | Hardware | Hardware and fasteners | 1 set | TBD | TBD | Buy | TBD |  |  | ../drawings/hardware-layout.pdf | Bridge, tuning hardware, straps, pins, screws, jacks, or lacing as applicable. |
+| 4 | Fixtures | Jigs, templates, and workholding | 1 set | TBD | MDF/acrylic/plywood or shop stock | Make | Shop |  |  | ../drawings/fixtures.pdf | Registration pins, laser templates, CNC spoilboard, bending forms, or lathe supports. |
+| 5 | Finish | Finish and consumables | 1 set | TBD | Oil/wax/lacquer/adhesive/abrasives | Buy | TBD |  |  | ../drawings/finish-notes.md | Confirm finish is compatible with skin contact, food safety, reeds, strings, or glue. |
+| 6 | Validation | Measurement and tuning supplies | 1 set | Tuner, mic, calipers, hygrometer, test fixture | TBD | Buy/Use | Shop/lab |  |  | ../data/measurements.csv | Record target frequency, measured frequency, cents error, humidity, and notes. |
 
 <div class="page-break"></div>
 
-## sourcing.csv
+## ../packet/sourcing.csv
 
 Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.
 
@@ -169,19 +169,19 @@ Supplier/search tracker with specs, price/date fields, lead time, substitutes, a
 
 <div class="page-break"></div>
 
-## cut-list.csv
+## ../packet/cut-list.csv
 
 Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.
 
 | Part # | Part Name | Qty | Finished Dimensions | Rough Stock Dimensions | Material | Grain / Orientation | Source Formula / Drawing | Operation | Yield / Board Ft / Sheet Use | Offcut Notes | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Primary blank or shell stock | 1 | Small (magazine baseline) | TBD plus workholding/tuning allowance | Steel or hardwood top | TBD | Design sheet and drawing-brief.md | Cut to rough size, flatten/square, mark datum | TBD | Reserve offcuts for test cuts and tuning coupons. | Needs dimensions |
-| 2 | Fixture or template stock | 1 set | TBD | TBD | MDF, acrylic, plywood, or shop stock | N/A | drawing-brief.md and CAD/CNC setup | Laser/CNC/drill fixture components | TBD | Use offcuts when registration accuracy is not compromised. | Needs fixture design |
-| 3 | Test coupons | TBD | Representative tuning/material samples | TBD | Steel or hardwood top | Match production orientation | validation.csv | Cut before final part when tuning or finish risk exists | TBD | Keep labeled with material batch and orientation. | Recommended |
+| 1 | Primary blank or shell stock | 1 | Small (magazine baseline) | TBD plus workholding/tuning allowance | Steel or hardwood top | TBD | Design sheet and ../packet/drawing-brief.md | Cut to rough size, flatten/square, mark datum | TBD | Reserve offcuts for test cuts and tuning coupons. | Needs dimensions |
+| 2 | Fixture or template stock | 1 set | TBD | TBD | MDF, acrylic, plywood, or shop stock | N/A | ../packet/drawing-brief.md and CAD/CNC setup | Laser/CNC/drill fixture components | TBD | Use offcuts when registration accuracy is not compromised. | Needs fixture design |
+| 3 | Test coupons | TBD | Representative tuning/material samples | TBD | Steel or hardwood top | Match production orientation | ../packet/validation.csv | Cut before final part when tuning or finish risk exists | TBD | Keep labeled with material batch and orientation. | Recommended |
 
 <div class="page-break"></div>
 
-## drawing-brief.md
+## ../packet/drawing-brief.md
 
 Manufacturing drawing and technical product sketch brief.
 
@@ -284,7 +284,7 @@ Rules:
 
 <div class="page-break"></div>
 
-## assembly-manual.md
+## ../packet/assembly-manual.md
 
 Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.
 
@@ -296,9 +296,9 @@ Revision/date: REV-A / 2026-05-02
 
 ## Before You Start
 
-- Confirm `design.md`, `bom.csv`, `sourcing.csv`, `cut-list.csv`, `drawing-brief.md`, and `validation.csv` agree.
+- Confirm `../packet/design.md`, `../packet/bom.csv`, `../packet/sourcing.csv`, `../packet/cut-list.csv`, `../packet/drawing-brief.md`, and `../packet/validation.csv` agree.
 - Confirm all purchased hardware dimensions against drawings before cutting irreversible features.
-- Photograph each major setup and save images in `images/`.
+- Photograph each major setup and save images in `../../assets/images/`.
 
 ## Tools And Fixtures
 
@@ -321,12 +321,12 @@ Revision/date: REV-A / 2026-05-02
 
 ## Photo / Diagram Placeholders
 
-- `images/01-materials.jpg`
-- `images/02-fixture-setup.jpg`
-- `images/03-machining.jpg`
-- `images/04-dry-fit.jpg`
-- `images/05-assembly.jpg`
-- `images/06-validation.jpg`
+- `../../assets/images/01-materials.jpg`
+- `../../assets/images/02-fixture-setup.jpg`
+- `../../assets/images/03-machining.jpg`
+- `../../assets/images/04-dry-fit.jpg`
+- `../../assets/images/05-assembly.jpg`
+- `../../assets/images/06-validation.jpg`
 
 ## Maintenance / Setup Notes
 
@@ -337,21 +337,21 @@ Revision/date: REV-A / 2026-05-02
 
 <div class="page-break"></div>
 
-## validation.csv
+## ../packet/validation.csv
 
 Target/measured values, tolerance, environment, result, and tuning/build action log.
 
 | Check # | Feature / Test | Target | Unit | Tolerance | Source | Measured 1 | Measured 2 | Measured 3 | Environment | Result | Action / Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | A4 frequency reference | 440 | Hz | Exact formula sanity check | acoustic-models.md |  |  |  | TBD |  |  |
-| 2 | Overall envelope | Small (magazine baseline) | in | TBD | drawing-brief.md |  |  |  | TBD |  |  |
+| 2 | Overall envelope | Small (magazine baseline) | in | TBD | ../packet/drawing-brief.md |  |  |  | TBD |  |  |
 | 3 | Tongue drum tuning targets | D minor / A minor | Hz/cents | TBD | design sheet |  |  |  | Temp/humidity TBD |  |  |
-| 4 | Critical fit hardware | All purchased/made parts fit | pass/fail | No forced fit | bom.csv and drawings |  |  |  | Shop |  |  |
-| 5 | Finish and contact safety | Compatible with use | pass/fail | No tack/odor/skin issue | sourcing.csv |  |  |  | Shop |  |  |
+| 4 | Critical fit hardware | All purchased/made parts fit | pass/fail | No forced fit | ../packet/bom.csv and drawings |  |  |  | Shop |  |  |
+| 5 | Finish and contact safety | Compatible with use | pass/fail | No tack/odor/skin issue | ../packet/sourcing.csv |  |  |  | Shop |  |  |
 
 <div class="page-break"></div>
 
-## supplier-rfq.md
+## ../packet/supplier-rfq.md
 
 Supplier email/request-for-quote starter.
 
@@ -368,7 +368,7 @@ I am sourcing components for a musical-instrument prototype:
 - Key/scale: D minor / A minor
 - Primary material: Steel or hardwood top
 
-Could you quote the items listed in `sourcing.csv` or recommend compatible alternatives?
+Could you quote the items listed in `../packet/sourcing.csv` or recommend compatible alternatives?
 
 Please include:
 
@@ -386,7 +386,7 @@ Tony
 
 <div class="page-break"></div>
 
-## visual-bom-brief.md
+## ../packet/visual-bom-brief.md
 
 Art direction for an image-forward visual BOM.
 
@@ -401,8 +401,8 @@ Revision/date: REV-A / 2026-05-02
 Use Tony's Ashiko visual BOM as the preferred pattern:
 
 ```text
-C:/Users/Tony/Documents/GitHub/ashiko-drum-workshop/images/figure-bom-v2.png
-/mnt/c/Users/Tony/Documents/GitHub/ashiko-drum-workshop/images/figure-bom-v2.png
+C:/Users/Tony/Documents/GitHub/ashiko-drum-workshop/../../assets/images/figure-bom-v2.png
+/mnt/c/Users/Tony/Documents/GitHub/ashiko-drum-workshop/../../assets/images/figure-bom-v2.png
 ```
 
 ## Layout
@@ -432,13 +432,13 @@ C:/Users/Tony/Documents/GitHub/ashiko-drum-workshop/images/figure-bom-v2.png
 
 ## Output Targets
 
-- `images/visual-bom.png`
-- `images/visual-bom.pdf`
+- `../../assets/images/visual-bom.png`
+- `../../assets/images/visual-bom.pdf`
 - Source workbook/sheet or editable design file:
 
 <div class="page-break"></div>
 
-## wolfram-starter.wl
+## ../packet/wolfram-starter.wl
 
 Wolfram starter for physics, optimization, visualization, and validation.
 

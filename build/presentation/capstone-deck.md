@@ -8,27 +8,27 @@
 # Project Intent
 - Create a traceable build packet for `TNG-001` that connects the master catalog row, design sheet, BOM, sourcing, stock prep, validation, assembly, drawing brief, visual BOM brief, Wolfram starter, and CAD/CNC placeholder paths.
 
-_Speaker notes:_ Read design.md before committing to dimensions or sourcing decisions.
+_Speaker notes:_ Read ../packet/design.md before committing to dimensions or sourcing decisions.
 
 ---
 
 # How To Use This Packet
-- Start with design.md for intent and assumptions.
-- Use bom.csv, sourcing.csv, and cut-list.csv before buying or cutting.
-- Use drawing-brief.md and CAD/CNC folders before machining.
+- Start with ../packet/design.md for intent and assumptions.
+- Use ../packet/bom.csv, ../packet/sourcing.csv, and ../packet/cut-list.csv before buying or cutting.
+- Use ../packet/drawing-brief.md and CAD/CNC folders before machining.
 - Print the packet for shopping, shop work, and validation.
 
 ---
 
 # File Map
-- design.md: Project intent, catalog metadata, assumptions, and validation plan.
-- bom.csv: Starter bill of materials with part categories, quantities, drawing refs, and notes.
-- sourcing.csv: Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.
-- cut-list.csv: Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.
-- drawing-brief.md: Manufacturing drawing and technical product sketch brief.
-- assembly-manual.md: Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.
-- validation.csv: Target/measured values, tolerance, environment, result, and tuning/build action log.
-- supplier-rfq.md: Supplier email/request-for-quote starter.
+- ../packet/design.md: Project intent, catalog metadata, assumptions, and validation plan.
+- ../packet/bom.csv: Starter bill of materials with part categories, quantities, drawing refs, and notes.
+- ../packet/sourcing.csv: Supplier/search tracker with specs, price/date fields, lead time, substitutes, and risks.
+- ../packet/cut-list.csv: Rough/final stock sizes, material, grain/orientation, operations, yield, and offcuts.
+- ../packet/drawing-brief.md: Manufacturing drawing and technical product sketch brief.
+- ../packet/assembly-manual.md: Shop-facing sequence, tools, fixtures, safety, tuning, finishing, and maintenance notes.
+- ../packet/validation.csv: Target/measured values, tolerance, environment, result, and tuning/build action log.
+- ../packet/supplier-rfq.md: Supplier email/request-for-quote starter.
 
 ---
 
@@ -55,15 +55,15 @@ _Speaker notes:_ Read design.md before committing to dimensions or sourcing deci
 ---
 
 # Drawings, CAD, CNC
-- drawing-brief.md defines required views, dimensions, datums, sketch intent.
-- cad/ holds models and design tables.
-- cnc/ holds CAM, toolpaths, setup sheets, dry-run notes.
-- drawings/ holds PDFs, SVGs, DXFs, drawing exports.
+- ../packet/drawing-brief.md defines required views, dimensions, datums, sketch intent.
+- ../cad/ holds models and design tables.
+- ../cnc/ holds CAM, toolpaths, setup sheets, dry-run notes.
+- ../drawings/ holds PDFs, SVGs, DXFs, drawing exports.
 
 ---
 
 # Images And Screenshots
-- Add hero render/photo, visual BOM, shop screenshots, drawing previews, validation photos in images/.
+- Add hero render/photo, visual BOM, shop screenshots, drawing previews, validation photos in ../../assets/images/.
 
 ---
 

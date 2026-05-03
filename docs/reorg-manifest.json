@@ -1,0 +1,133 @@
+{
+  "repo": "tongue-drum",
+  "generated_at": "2026-05-03T13:59:43",
+  "template": "../instrument-maker/docs/instrument-repo-folder-template.md",
+  "policy": "Move-only reorganization; no source files intentionally deleted.",
+  "moved": [
+    {
+      "old": "SKILLS.md",
+      "new": "docs/SKILLS.md"
+    },
+    {
+      "old": "assembly-manual.md",
+      "new": "build/packet/assembly-manual.md"
+    },
+    {
+      "old": "bom.csv",
+      "new": "build/packet/bom.csv"
+    },
+    {
+      "old": "cad/.gitkeep",
+      "new": "build/cad/.gitkeep"
+    },
+    {
+      "old": "capstone-deck.md",
+      "new": "build/presentation/capstone-deck.md"
+    },
+    {
+      "old": "capstone-deck.pptx",
+      "new": "build/presentation/capstone-deck.pptx"
+    },
+    {
+      "old": "capstone-manifest.json",
+      "new": "build/presentation/capstone-manifest.json"
+    },
+    {
+      "old": "cnc/.gitkeep",
+      "new": "build/cnc/.gitkeep"
+    },
+    {
+      "old": "cut-list.csv",
+      "new": "build/packet/cut-list.csv"
+    },
+    {
+      "old": "data/.gitkeep",
+      "new": "build/data/.gitkeep"
+    },
+    {
+      "old": "design.md",
+      "new": "build/packet/design.md"
+    },
+    {
+      "old": "drawing-brief.md",
+      "new": "build/packet/drawing-brief.md"
+    },
+    {
+      "old": "drawings/.gitkeep",
+      "new": "build/drawings/.gitkeep"
+    },
+    {
+      "old": "images/.gitkeep",
+      "new": "assets/images/.gitkeep"
+    },
+    {
+      "old": "images/img20260426_00430913.png",
+      "new": "assets/images/img20260426_00430913.png"
+    },
+    {
+      "old": "images/img20260426_00455146.png",
+      "new": "assets/images/img20260426_00455146.png"
+    },
+    {
+      "old": "images/img20260426_01041622.png",
+      "new": "assets/images/img20260426_01041622.png"
+    },
+    {
+      "old": "images/img20260426_01045871.png",
+      "new": "assets/images/img20260426_01045871.png"
+    },
+    {
+      "old": "images/img20260426_01061547.png",
+      "new": "assets/images/img20260426_01061547.png"
+    },
+    {
+      "old": "print-packet.html",
+      "new": "build/presentation/print-packet.html"
+    },
+    {
+      "old": "print-packet.md",
+      "new": "build/presentation/print-packet.md"
+    },
+    {
+      "old": "print-packet.pdf",
+      "new": "build/presentation/print-packet.pdf"
+    },
+    {
+      "old": "showcase/brochure.html",
+      "new": "docs/showcase/brochure.html"
+    },
+    {
+      "old": "sourcing.csv",
+      "new": "build/packet/sourcing.csv"
+    },
+    {
+      "old": "study/README.md",
+      "new": "docs/study/README.md"
+    },
+    {
+      "old": "study/data-template.csv",
+      "new": "docs/study/data-template.csv"
+    },
+    {
+      "old": "supplier-rfq.md",
+      "new": "build/packet/supplier-rfq.md"
+    },
+    {
+      "old": "tongue-drum-design-table.xlsx",
+      "new": "build/design-tables/tongue-drum-design-table.xlsx"
+    },
+    {
+      "old": "validation.csv",
+      "new": "build/packet/validation.csv"
+    },
+    {
+      "old": "visual-bom-brief.md",
+      "new": "build/packet/visual-bom-brief.md"
+    },
+    {
+      "old": "wolfram-starter.wl",
+      "new": "build/packet/wolfram-starter.wl"
+    }
+  ],
+  "skipped": []
+}

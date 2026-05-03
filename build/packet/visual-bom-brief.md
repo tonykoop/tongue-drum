@@ -9,8 +9,8 @@ Revision/date: REV-A / 2026-05-02
 Use Tony's Ashiko visual BOM as the preferred pattern:
 
 ```text
-C:/Users/Tony/Documents/GitHub/ashiko-drum-workshop/images/figure-bom-v2.png
-/mnt/c/Users/Tony/Documents/GitHub/ashiko-drum-workshop/images/figure-bom-v2.png
+C:/Users/Tony/Documents/GitHub/ashiko-drum-workshop/../../assets/images/figure-bom-v2.png
+/mnt/c/Users/Tony/Documents/GitHub/ashiko-drum-workshop/../../assets/images/figure-bom-v2.png
 ```
 
 ## Layout
@@ -40,6 +40,6 @@ C:/Users/Tony/Documents/GitHub/ashiko-drum-workshop/images/figure-bom-v2.png
 
 ## Output Targets
 
-- `images/visual-bom.png`
-- `images/visual-bom.pdf`
+- `../../assets/images/visual-bom.png`
+- `../../assets/images/visual-bom.pdf`
 - Source workbook/sheet or editable design file:
