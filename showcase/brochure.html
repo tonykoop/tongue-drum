@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title> —  — Heifer Zephyr</title>
+<link rel="stylesheet" href="../../brand/tokens.css">
+<style>
+  /* ─── Bi-fold letter sheet (8.5 × 11 → 4 panels at 5.5 wide each when folded) ─── */
+  @page { size: letter landscape; margin: 0; }
+  body  { margin: 0; }
+
+  .sheet {
+    width: 11in; height: 8.5in;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    page-break-after: always;
+    background: var(--hz-cream);
+  }
+  .panel {
+    padding: 0.5in 0.5in;
+    display: flex; flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .accent-stripe {
+    height: 4px; background: var(--hz-accent);
+    margin-bottom: var(--hz-pad-md);
+  }
+
+  /* ─── Front cover ─── */
+  .cover-mark {
+    display: flex; align-items: center; gap: var(--hz-pad-md);
+    margin-bottom: var(--hz-pad-md);
+  }
+  .cover-mark .mark-svg {
+    width: 56px; height: 56px;
+    border: var(--hz-rule-hair);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--hz-font-mono); font-size: 8px;
+    color: var(--hz-shadow);
+  }
+  .cover-mark .wordmark {
+    font-family: var(--hz-font-display);
+    font-style: italic;
+    font-size: 28px;
+    color: var(--hz-ink);
+  }
+  .cover-title {
+    font-family: var(--hz-font-display);
+    font-style: italic;
+    font-size: 64px;
+    line-height: 1.05;
+    margin: var(--hz-pad-lg) 0 var(--hz-pad-sm) 0;
+    color: var(--hz-ink);
+  }
+  .cover-tag {
+    font-style: italic;
+    color: var(--hz-shadow);
+    font-size: 17px;
+    margin: 0 0 var(--hz-pad-md) 0;
+  }
+  .cover-hero {
+    flex: 1;
+    background: var(--hz-bone);
+    background-size: cover; background-position: center;
+    border-bottom: var(--hz-rule-thin);
+    margin-top: auto;
+    display: flex; align-items: flex-end; justify-content: flex-start;
+    color: var(--hz-shadow);
+    font-family: var(--hz-font-mono); font-size: 9px;
+    padding: var(--hz-pad-sm);
+  }
+
+  /* ─── Inside text panel ─── */
+  .panel h2 {
+    font-family: var(--hz-font-mono);
+    font-style: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--hz-shadow);
+    border-bottom: var(--hz-rule-hair);
+    padding-bottom: var(--hz-pad-xs);
+    margin: var(--hz-pad-md) 0 var(--hz-pad-sm) 0;
+  }
+  .marketing { font-size: 16px; line-height: 1.55; }
+
+  blockquote.pull {
+    border-left: 3px solid var(--hz-accent);
+    padding: var(--hz-pad-sm) 0 var(--hz-pad-sm) var(--hz-pad-md);
+    margin: var(--hz-pad-lg) 0 0 0;
+    font-family: var(--hz-font-display);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  /* ─── Spec block ─── */
+  table.spec {
+    width: 100%; border-collapse: collapse;
+    font-family: var(--hz-font-mono); font-size: 11px;
+    letter-spacing: 0.04em;
+  }
+  table.spec td {
+    padding: 6px 0;
+    border-bottom: var(--hz-rule-hair);
+    vertical-align: top;
+  }
+  table.spec td:first-child {
+    width: 38%;
+    color: var(--hz-shadow);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+  }
+
+  ol.steps {
+    padding-left: var(--hz-pad-md);
+    margin: var(--hz-pad-sm) 0 0 0;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  ol.steps li { margin-bottom: var(--hz-pad-xs); }
+
+  /* ─── Back cover ─── */
+  .back-mark {
+    display: flex; align-items: center; gap: var(--hz-pad-sm);
+    margin-bottom: var(--hz-pad-md);
+  }
+  .back-mark .mark-svg { width: 36px; height: 36px; }
+  .back-mark .wordmark { font-size: 20px; }
+
+  .bio { font-size: 14px; line-height: 1.5; }
+  .bio em { color: var(--hz-shadow); }
+
+  .colophon {
+    margin-top: auto;
+    padding-top: var(--hz-pad-md);
+    border-top: var(--hz-rule-bold);
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--hz-font-mono); font-size: 10px;
+    text-transform: uppercase; letter-spacing: 0.16em;
+    color: var(--hz-shadow);
+  }
+
+  .label {
+    font-family: var(--hz-font-mono);
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--hz-shadow);
+  }
+</style>
+</head>
+
+<body class="hz-family-percussion">
+
+<!-- ============================================================
+     SHEET 1 — outside spread
+     left panel  = back cover (panel 4)
+     right panel = front cover (panel 1)
+     (When printed double-sided and folded, this is what shows on
+      the outside of the brochure. Reading order when folded:
+        front cover → inside left → inside right → back cover)
+     ============================================================ -->
+<div class="sheet">
+
+  <!-- BACK COVER (left panel of outside spread) -->
+  <div class="panel">
+    <div class="accent-stripe"></div>
+
+    <div class="back-mark">
+      <div class="mark-svg" style="border: var(--hz-rule-hair); display:flex; align-items:center; justify-content:center; font-family: var(--hz-font-mono); font-size: 7px; color: var(--hz-shadow);">[mark]</div>
+      <div class="wordmark" style="font-family: var(--hz-font-display); font-style: italic;">Heifer Zephyr</div>
+    </div>
+
+    <h2>About the maker</h2>
+    <p class="bio"></p>
+
+    <h2 style="margin-top: var(--hz-pad-lg);">Provenance</h2>
+    <table class="spec">
+      <tr><td>Serial</td><td></td></tr>
+      <tr><td>Built</td><td>Santa Clara, CA · 2026</td></tr>
+      
+    </table>
+
+    <div class="colophon">
+      <span>Heifer Zephyr</span>
+      <span>Tony Koop</span>
+      <span>2026</span>
+    </div>
+  </div>
+
+  <!-- FRONT COVER (right panel of outside spread) -->
+  <div class="panel">
+    <div class="accent-stripe"></div>
+
+    <div class="cover-mark">
+      <div class="mark-svg">[mark]</div>
+      <div class="wordmark">Heifer Zephyr</div>
+    </div>
+
+    <h1 class="cover-title"></h1>
+    <p class="cover-tag"></p>
+
+    <p class="label" style="margin-top: var(--hz-pad-md); margin-bottom: 0;">
+       
+    </p>
+
+    <div class="cover-hero" style="background-image: url('images/img20260426_01045871.png');">
+      <span>[hero photo — images/img20260426_01045871.png]</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     SHEET 2 — inside spread
+     left panel  = inside left (panel 2): marketing + pull quote
+     right panel = inside right (panel 3): spec + build method
+     ============================================================ -->
+<div class="sheet">
+
+  <!-- INSIDE LEFT -->
+  <div class="panel">
+    <div class="accent-stripe"></div>
+
+    <h2>The instrument</h2>
+    <p class="marketing"></p>
+
+    <blockquote class="pull"></blockquote>
+
+
+  </div>
+
+  <!-- INSIDE RIGHT -->
+  <div class="panel">
+    <div class="accent-stripe"></div>
+
+    <h2>Specifications</h2>
+    <table class="spec">
+      <tr><td>Family</td><td></td></tr>
+      
+      <tr><td>Top</td><td>Steel or hardwood top</td></tr>
+      <tr><td>Body</td><td>Populate from design sheet and CAD model.</td></tr>
+      <tr><td>Hardware</td><td>Bridge, tuning hardware, straps, pins, screws, jacks, or lacing as applicable.</td></tr>
+      <tr><td>Finish</td><td>Confirm finish is compatible with skin contact, food safety, reeds, strings, or glue.</td></tr>
+    </table>
+
+    <h2 style="margin-top: var(--hz-pad-lg);">Build method</h2>
+    <ol class="steps">
+    </ol>
+
+    <div style="margin-top: auto; padding-top: var(--hz-pad-md);
+                font-family: var(--hz-font-mono); font-size: 10px;
+                color: var(--hz-shadow); text-transform: uppercase; letter-spacing: 0.16em;">
+      Played, struck, blown, bent, bowed, plucked.
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
