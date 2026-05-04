@@ -23,6 +23,7 @@ The full move history for this layout is tracked in [`reorg-manifest.json`](reor
 - [`../build/drawings/`](../build/drawings/) - dimensioned drawing sheets and drawing exports.
 - [`../build/cad/`](../build/cad/) - CAD/OpenSCAD/SolidWorks source and exports.
 - [`../build/cnc/`](../build/cnc/) - CNC/CAM plans, setup sheets, fixtures, and toolpaths.
+- [`research/`](research/) - source notes, maker references, and externally derived build/tuning observations.
 - [`study/`](study/) - DoE protocol and strike-level data schema.
 - [`../assets/images/`](../assets/images/) - photos, attributed references, concept art, and generated visuals.
 - [`./`](./) - attribution, provenance, research, handoff notes, and reorganization manifest.

@@ -12,6 +12,7 @@ Engineering documentation for a small series of tongue drum (slit drum) builds, 
 1. **Three planned drums** — small (magazine baseline), medium (original bilateral-tongue design), large (original extended-range design). Each one becomes a phase of the study; together they bound material, geometric, and form-factor effects on the bass tone.
 2. **A DoE protocol** for predicting each tongue's fundamental frequency from the cantilever-scaling model `f₁ ≈ 0.162 · (h/L²) · √(E/ρ)`, validated empirically against tongue-by-tongue strike measurements. Full protocol at [`docs/study/README.md`](docs/study/README.md).
 3. **A skill index** ([`docs/SKILLS.md`](docs/SKILLS.md)) listing the engineering methodologies this repo demonstrates, including the cross-repo Helmholtz cavity resonator skill canonically defined in [`tonykoop/djembe`](https://github.com/tonykoop/djembe/blob/main/skills/helmholtz-cavity-resonator.md).
+4. **Maker research notes** — distilled build/tuning advice from the I Kinda Wanna Learn tongue-drum series, Scratch calculators, and linked YouTube feeds at [`docs/research/ikindawannalearn-tongue-drum-notes.md`](docs/research/ikindawannalearn-tongue-drum-notes.md).
 
 Sister repos: [`djembe`](https://github.com/tonykoop/djembe) (where the cavity-resonance physics was originally derived for the bass-tone analysis), [`tensile-testing`](https://github.com/tonykoop/tensile-testing) (where the same DoE methodology drove material characterization at Uniformity Labs), and [`cnc`](https://github.com/tonykoop/cnc) (the CAM/Haas operator skill that may be used for the original-design body fabrication).
 
@@ -74,6 +75,7 @@ The full move history for this layout is tracked in [`docs/reorg-manifest.json`]
 | DoE protocol | ✓ done (`docs/study/README.md`) |
 | Data schema | ✓ done (`docs/study/data-template.csv`) |
 | Skills index + cross-repo helmholtz link | ✓ done (`docs/SKILLS.md`) |
+| I Kinda Wanna Learn maker research notes | ✓ done (`docs/research/ikindawannalearn-tongue-drum-notes.md`) |
 | Small drum first build | forthcoming |
 | Medium drum CAD | forthcoming (SolidWorks pending) |
 | Large drum CAD | forthcoming (SolidWorks pending) |
