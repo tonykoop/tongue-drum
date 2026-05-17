@@ -1,0 +1,14 @@
+feature_id,feature_name,value_mm,value_in,source_file,equation_or_comment,authority,status
+T01,drum_len,457.2,18.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"MASTER_TEMPLATE/SK_OUTER_BOX/drum_len_in_sketch@SK_OUTER_BOX",reference_only,blocked_pending_shop_capture
+T02,drum_wid,254.0,10.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"MASTER_TEMPLATE/SK_OUTER_BOX/drum_wid_in_sketch@SK_OUTER_BOX",reference_only,blocked_pending_shop_capture
+T03,top_thk,12.7,0.5000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"MASTER_TEMPLATE/SK_HEIGHT_STACK/top_thk_in_sketch@SK_HEIGHT_STACK",reference_only,blocked_pending_shop_capture
+T04,cavity_hgt,127.0,5.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"MASTER_TEMPLATE/SK_HEIGHT_STACK/cavity_hgt_in@SK_HEIGHT_STACK",reference_only,blocked_pending_shop_capture
+T05,slit_kerf,1.905,0.0750,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 7] slit_kerf_in",reference_only,blocked_pending_cnc_compensation
+T06,slit_end_rad,6.35,0.2500,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 8] slit_end_rad_in",reference_only,blocked_pending_cnc_compensation
+T07,tongue_root_gap,1.524,0.0600,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 9] tongue_gap_in",reference_only,blocked_pending_shop_capture
+T08,t01_len,216.519,8.5244,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"T01_6TMagazineBaseline D22, [Equation 27] t01_len_in",reference_only,blocked_pending_tuning_capture
+T09,t02_len,218.440,8.6000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"T06_6TMagazineBaseline D13, [Equation 53] t02_len_in",reference_only,blocked_pending_tuning_capture
+T10,t03_len,152.400,6.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"T03_6TMagazineBaseline D2, [Equation 54] t03_len_in",reference_only,blocked_pending_tuning_capture
+T11,t04_len,149.860,5.9000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 55] t04_len_in",reference_only,blocked_pending_tuning_capture
+T12,t05_len,160.020,6.3000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"T05_6TMagazineBaseline D3, [Equation 56] t05_len_in",reference_only,blocked_pending_tuning_capture
+T13,t06_len,203.200,8.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 57] t06_len_in",reference_only,blocked_pending_tuning_capture

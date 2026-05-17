@@ -1,0 +1,6 @@
+val_id,scope,gate_id,check,artifact,status,notes,owner,next_due
+VL-001,CAD,PCG-001,Envelope and bank plan are phase-1 mapped,build/cad/phase1-dimensions-map.csv,open,Medium-accuracy envelope map required before production,Round-23 lane owner,2026-05-18
+VL-002,CAD,CG-002,Kerf and radius compensation are quantified,build/cnc/phase1-cnc-gates.csv,open,Require compensated kerf plan before first slot path export,Round-23 lane owner,2026-05-18
+VL-003,CNC,CG-004,Fixture and workholding registration validated,build/cnc/phase1-cnc-gates.csv,open,No full panel CAM release until fixture audit closes,Round-23 lane owner,2026-05-19
+VL-004,Tuning,TUNE-001,Seed strike evidence recorded and replayable,docs/study/data-template.csv,open,One baseline row exists; full phase plan still pending,Round-23 lane owner,2026-05-19
+VL-005,Evidence,visual-output-register.csv,Visual/output artifacts marked reference-only,build/packet/visual-output-register.csv,open,No artifact in this lane currently has fabrication authority,Round-23 lane owner,2026-05-19
