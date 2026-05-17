@@ -4,11 +4,10 @@
 ClearAll["Global`*"];
 
 $scriptDir = DirectoryName[$InputFileName];
-$outputDir = FileNameNormalize[FileNameJoin[{ $scriptDir, "..", "data" }]];
+$outputDir = ExpandFileName[FileNameJoin[{ $scriptDir, "..", "data" }]];
 If[!DirectoryQ[$outputDir], CreateDirectory[$outputDir]];
 
 inch = 0.0254;
-
 metadata = <|
   "InstrumentID" -> "TNG-001",
   "InstrumentType" -> "Tongue drum",
@@ -22,8 +21,6 @@ materialLibrary = {
   <|"Material" -> "Cherry", "E_GPa" -> 10.55, "Rho" -> 560|>
 };
 
-(* Cantilever-style heuristic used by this packet.
-   This is a sidecar modeling slice and should not be treated as finalized build truth. *)
 kModel = 0.162;
 
 frequencyFromMidi[midi_Integer, a4_: 440.] := a4*2^((midi - 69)/12.);
@@ -45,8 +42,7 @@ requiredLengthIn[targetHz_, thicknessIn_, material_Association] := Module[
   Sqrt[kModel*h*Sqrt[ePa/rho]/targetHz]/inch
 ];
 
-lengthModes = <|"Nominal" -> 1.0, "Short-1%" -> 0.99, "Long-1%" -> 1.01|>;
-
+lengthModes = {{"Nominal", 1.0}, {"Short-1%", 0.99}, {"Long-1%", 1.01}};
 noteRows = {
   <|"Note" -> "D4", "Midi" -> 62, "Target_Hz" -> frequencyFromMidi[62]|>,
   <|"Note" -> "E4", "Midi" -> 64, "Target_Hz" -> frequencyFromMidi[64]|>,
@@ -57,71 +53,49 @@ noteRows = {
   <|"Note" -> "C5", "Midi" -> 72, "Target_Hz" -> frequencyFromMidi[72]|>
 };
 
-runTable = Flatten@Map[
-  Function[mat,
-    Flatten@Map[
-      Function[tone,
-        Module[{thicknesses = {0.25, 0.375}, baseLength},
-          baseLength = requiredLengthIn[tone["Target_Hz"], #, mat] & /@ thicknesses;
-          Join @@ MapIndexed[
-            Function[{lengthIn, idx},
-              Module[{toneMode = #2[[1]], modeName = Keys[lengthModes][[toneMode]], scale = #1},
-                <|
-                  "Material" -> mat["Material"],
-                  "Thickness_in" -> thicknesses[[idx[[1]]]],
-                  "Length_Mode" -> modeName,
-                  "Note" -> tone["Note"],
-                  "Midi" -> tone["Midi"],
-                  "Target_Hz" -> tone["Target_Hz"],
-                  "Length_in" -> baseLength[[idx[[1]]]]*scale,
-                  "Predicted_Hz" -> cantileverFrequency[
-                    thicknesses[[idx[[1]]]],
-                    baseLength[[idx[[1]]]]*scale,
-                    mat
-                  ],
-                  "Cents_Error" -> 1200*Log2[
-                    cantileverFrequency[
-                      thicknesses[[idx[[1]]]],
-                      baseLength[[idx[[1]]]]*scale,
-                      mat
-                    ]/tone["Target_Hz"]
-                |>
-              ]
-            ,
-            lengthModes
-          ]
+runRows = Flatten@Table[
+  Module[{materialName = material["Material"], midi = tone["Midi"], targetHz = tone["Target_Hz"], note = tone["Note"]},
+    Flatten@Table[
+      Module[{baseLength = requiredLengthIn[targetHz, thickness, material]},
+        Table[
+          Module[{modeName = mode[[1]], scale = mode[[2]], tunedLength, predicted},
+            tunedLength = baseLength*scale;
+            predicted = cantileverFrequency[thickness, tunedLength, material];
+            <|
+              "Material" -> materialName,
+              "Thickness_in" -> thickness,
+              "Length_Mode" -> modeName,
+              "Note" -> note,
+              "Midi" -> midi,
+              "Target_Hz" -> targetHz,
+              "Length_in" -> tunedLength,
+              "Predicted_Hz" -> predicted,
+              "Cents_Error" -> 1200*Log2[predicted/targetHz]
+            |>
+          ],
+          {mode, lengthModes}
         ]
       ],
-      noteRows
+      {thickness, {0.25, 0.375}}
     ]
   ],
-  materialLibrary
+  {material, materialLibrary},
+  {tone, noteRows}
 ];
 
-runTable = Map[Prepend[metadata, #]&, runTable];
+runRows = Map[Join[metadata, #]&, runRows];
 
 csvPath = FileNameJoin[{$outputDir, "tongue-frequency-runtime-output.csv"}];
-plotPath = FileNameJoin[{$outputDir, "tongue-frequency-runtime-plot.png"}];
+If[Length[runRows] > 0,
+  headers = Keys[runRows[[1]]];
+  table = Prepend[Lookup[runRows, headers], headers];
+  Export[csvPath, table, "CSV"];
 
-Export[csvPath, runTable, "CSV"];
-
-nominalRows = Select[runTable, #Length_Mode == "Nominal"&];
-byMaterial = GroupBy[nominalRows, #Material&];
-plotData = Values @ Map[Function[rows, rows[[All, {"Thickness_in", "Predicted_Hz"}]]], byMaterial];
-
-plot = ListPlot[
-  plotData,
-  PlotLegends -> Keys[byMaterial],
-  AxesLabel -> {"Thickness (in)", "Predicted f (Hz)"},
-  PlotLabel -> "Tongue frequency model sensitivity to material and thickness",
-  ImageSize -> 900,
-  Joined -> True,
-  PlotMarkers -> Automatic
+  Print["WOLFRAM_RUNTIME_SUCCESS=TRUE"];
+  Print["WOLFRAM_RUNTIME_OUTPUT_DIR=" <> $outputDir];
+  Print["WOLFRAM_RUNTIME_CSV=" <> csvPath];
+  Print["WOLFRAM_RUNTIME_ROW_COUNT=" <> ToString[Length[runRows]]];
+,
+  Print["WOLFRAM_RUNTIME_SUCCESS=FALSE"];
+  Print["WOLFRAM_RUNTIME_ERROR=NO_ROWS"];
 ];
-Export[plotPath, plot];
-
-Print["WOLFRAM_RUNTIME_SUCCESS=TRUE"];
-Print["WOLFRAM_RUNTIME_OUTPUT_DIR=" <> $outputDir];
-Print["WOLFRAM_RUNTIME_CSV=" <> csvPath];
-Print["WOLFRAM_RUNTIME_PLOT=" <> plotPath];
-Print["WOLFRAM_RUNTIME_ROW_COUNT=" <> ToString[Length[runTable]]];
