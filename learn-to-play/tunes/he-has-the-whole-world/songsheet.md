@@ -1,6 +1,6 @@
 # He's Got the Whole World in His Hands — Songsheet
 
-**Key:** G pentatonic  **Tempo:** ♩= 100  **Meter:** 4/4  **Difficulty:** ★★☆  
+**Key:** G pentatonic  **Tempo:** ♩= 100  **Meter:** 4/4  **Difficulty:** ★★☆
 **Range:** D3–E4  **Source:** Traditional spiritual, public domain
 
 ## Music

@@ -1,6 +1,6 @@
 # Amazing Grace — Songsheet (Tongue Drum)
 
-**Key:** G pentatonic  **Tempo:** ♩= 76  **Meter:** 3/4  **Difficulty:** ★★☆  
+**Key:** G pentatonic  **Tempo:** ♩= 76  **Meter:** 3/4  **Difficulty:** ★★☆
 **Range:** D3–E4  **Source:** John Newton (1779) / trad. tune "New Britain", PD
 
 ## Music

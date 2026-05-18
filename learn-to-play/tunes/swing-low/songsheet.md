@@ -1,6 +1,6 @@
 # Swing Low, Sweet Chariot — Songsheet
 
-**Key:** G pentatonic  **Tempo:** ♩= 84  **Meter:** 4/4  **Difficulty:** ★★☆  
+**Key:** G pentatonic  **Tempo:** ♩= 84  **Meter:** 4/4  **Difficulty:** ★★☆
 **Range:** G3–E4  **Source:** Traditional African-American spiritual, PD (c. 1840s)
 
 ## Music

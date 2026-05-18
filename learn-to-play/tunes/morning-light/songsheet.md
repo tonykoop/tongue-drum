@@ -1,6 +1,6 @@
 # Morning Light — Songsheet
 
-**Key:** G major pentatonic  **Tempo:** ♩= 88  **Meter:** 4/4  **Difficulty:** ★★★  
+**Key:** G major pentatonic  **Tempo:** ♩= 88  **Meter:** 4/4  **Difficulty:** ★★★
 **Range:** D3–E4  **License:** MIT (original — Heifer Zephyr)
 
 ## Music
