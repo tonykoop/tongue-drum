@@ -1,0 +1,13 @@
+X:2
+T:Amazing Grace (G pentatonic)
+C:John Newton (1779), PD; tune "New Britain" trad. American, PD
+M:3/4
+L:1/4
+Q:1/4=76
+K:G
+%% G pentatonic version: uses G A B D E (no C or F#)
+%% The F# of standard G major is skipped; stays on pentatonic notes
+D2 | G3/2 B/ G E | D2 D | D3/2 G/ B2 | G3 |
+B3/2 d/ B G | A2 B | G3/2 E/ G D | G3 |
+G3/2 B/ G E | D2 D | D3/2 G/ B2 | G3 |
+B d e d | A2 B | G3/2 E/ G2 | G3 |

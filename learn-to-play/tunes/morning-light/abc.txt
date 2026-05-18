@@ -1,0 +1,13 @@
+X:5
+T:Morning Light
+C:Original — Heifer Zephyr / MIT License
+M:4/4
+L:1/8
+Q:1/4=88
+K:G
+%% Original composition for G pentatonic tongue drum
+%% Character: fresh, hopeful, beginning of the day
+G4 B4 | d4 e4 | d4 B4 | G8 |
+A4 B4 | d4 B4 | A4 G4 | D8 |
+G4 d4 | e4 d4 | B4 A4 | G8 |
+D4 G4 | A4 B4 | G4 D4 | G8 |
