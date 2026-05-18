@@ -1,0 +1,7 @@
+phase_gate_id,scope,feature,target_reference,source_file,required_action,status,stop_condition
+PCG-001,CAD Envelope,Overall envelope,Small_Baseline_6T,build/cad/phase1-dimensions-map.csv,Confirm overall body dims from phase-1 CAD row set and map to workshop envelope,open,Do not finalize pocket sizes from CAD images alone
+PCG-002,CAD Tuning geometry,Slot width,build/cad/phase1-dimensions-map.csv,Record `slit_kerf_in` and keep kerf compensation open in CNC table,open,No CNC cut before compensation and calibration gate passes
+PCG-003,CAD Tuning geometry,Tongue-tip radius,build/cad/phase1-dimensions-map.csv,Confirm slit-end radius in CAD table and require shop test plan,open,No tuning claim before repeated strike capture
+PCG-004,CAD Tuning geometry,Body thickness,build/cad/phase1-dimensions-map.csv,Track top/thickness values as phase-1 planning inputs,open,Do not treat these values as final fabrication authority
+PCG-005,CAD Tuning geometry,Tongue lengths,build/cad/phase1-dimensions-map.csv,Bind first six review tongue lengths to tuning IDs (t01..t06),open,No final tuning profile before strike log and correction analysis
+PCG-006,CNC Shop,Workholding datum,build/cnc/phase1-cnc-gates.csv,Create fixture/data capture pass for datum consistency,open,No prototype cuts until datum gate completes

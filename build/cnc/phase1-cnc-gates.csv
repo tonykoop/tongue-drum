@@ -1,0 +1,7 @@
+cnc_gate_id,phase,scope,entry_evidence,required_action,pass_criteria,stop_condition,status
+CG-001,P0,Workholding datum,build/packet/phase1-geometry-gates.csv,Create/confirm datum plan and zero reference for body centerline,fixture origin and edge references documented and reproducible,Any cut cannot proceed with unresolved datum alignment,open
+CG-002,P0,Cutter compensation,build/cad/phase1-dimensions-map.csv,Record cutter radius/bit width compensation plan and estimate kerf spread,Compensation row completed and accepted in build/cnc/phase1-cnc-gates.csv,No CNC slot width may be set from slot model alone,open
+CG-003,P0,Kerf coupons,build/packet/phase1-tuning-capture.csv,Cut labeled coupons for kerf and edge condition check,Coupon notes and post-cut dimensions recorded,No tuning cuts until coupon pass criteria met,open
+CG-004,P1,Fixture plan,build/cnc/phase1-cnc-gates.csv,Prepare spoilboard registration and clamp layout for 2-side access,Fixture IDs and clamp points recorded,Any fixture that distorts centerline requires redesign,open
+CG-005,P1,Bit/tool audit,workshop logs,Confirm tooling/material for wood/steel mix envelope,Appropriate tool and coolant strategy logged and validated in shop review,Unsafe cutter/tool unknown,open
+CG-006,P1,First-article fit,build/packet/phase1-tuning-capture.csv,Run first-article tongue slot mock pass before full panel cut,Pass/fail with measured deviation and notes,Any oversized/undersize pass requiring unknown correction,open

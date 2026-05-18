@@ -1,0 +1,6 @@
+artifact_id,path,artifact_kind,role,authority,dimension_claim,derived_from,fabrication_required,notes
+VIZ-001,build/packet/phase1-cad-cnc-tuning-gate-plan.md,markdown,plan,reference_only,none,phase1-geometry-gates.csv,false,Intent and gate scaffold only; not fabrication authority
+VIZ-002,build/packet/phase1-geometry-gates.csv,csv,control-table,reference_only,none,build/cad/phase1-dimensions-map.csv,false,CAD gate table for phase-1 planning and boundary control
+VIZ-003,build/cad/phase1-dimensions-map.csv,csv,dimension-table,reference_only,all rows pending,CAD dimensions csv,false,Traceable table of Small_Baseline_6T planned dimensions
+VIZ-004,build/packet/phase1-tuning-capture.csv,csv,tuning-data,reference_only,rows pending,tune capture log,false,Seed row copied from phase-1 baseline measurement template
+VIZ-005,build/cnc/phase1-cnc-gates.csv,csv,shop-gates,reference_only,none,cnc-gate table,false,Prototype shop readiness gates before first-article or production cutting
