@@ -1,0 +1,10 @@
+artifact_id,path,artifact_kind,role,authority,dimension_claim,derived_from,fabrication_required,review_status,notes
+R6-V5-001,README.md,markdown,repo-index,concept_only,none,repo README and packet design surface,false,self_checked,"Adds repo-level L2 V5 status only; not a build-ready claim."
+R6-V5-002,build/packet/README.md,markdown,packet-index,concept_only,none,existing V5 packet,false,self_checked,"Packet index and readiness statement only."
+R6-V5-003,build/packet/visual-output-register.csv,csv,packet-authority-register,concept_only,none,existing packet register,false,self_checked,"Packet-local register remains the detailed authority table."
+R6-V5-004,cad/mcp-session-log.md,markdown,tool-provenance,concept_only,none,no MCP or CAD authoring session,false,self_checked,"Round 6 provenance stub; no geometry or tuning values generated."
+R6-V5-005,build/cad/cad-mcp-session-log.md,markdown,packet-provenance,concept_only,none,existing packet log,false,self_checked,"Existing packet-local provenance log."
+R6-V5-006,cad/TNG-000_TongueDrum.SLDASM,solidworks,cad-source-candidate,pending_measurement,blocked until reviewed or measured,CAD inventory,true,unreviewed,"Existing assembly file; not promoted as fabrication authority in this migration."
+R6-V5-007,cad/TNG-000_MasterLayout.xlsx,spreadsheet,design-table-candidate,pending_measurement,blocked until reviewed or measured,CAD/workbook inventory,true,unreviewed,"Existing workbook; values are not copied or interpreted in this migration."
+R6-V5-008,assets/images/,image-set,reference-photos,reference_only,none,existing repo photos,false,unreviewed,"Reference photos only; not dimensional evidence."
+R6-V5-009,build/packet/wolfram-starter.wl,wolfram,source-only-model-stub,concept_only,none,gate definitions,false,self_checked,"Source-only placeholder; no runtime or numeric tuning claim."
