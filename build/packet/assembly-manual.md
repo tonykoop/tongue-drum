@@ -1,46 +1,34 @@
 # Assembly Manual
 
-Instrument ID: TNG-001
-Instrument: Tongue drum
-Revision/date: REV-A / 2026-05-02
+Status: L2 gate scaffold only.
 
-## Before You Start
+This is not a build-ready assembly manual. It lists the evidence gates that
+must close before irreversible shop work.
 
-- Confirm `design.md`, `bom.csv`, `sourcing.csv`, `cut-list.csv`, `drawing-brief.md`, and `validation.csv` agree.
-- Confirm all purchased hardware dimensions against drawings before cutting irreversible features.
-- Photograph each major setup and save images in `../../assets/images/`.
+## Before Any Build Step
 
-## Tools And Fixtures
+- Confirm `README.md`, `design.md`, `bom.csv`, `sourcing.csv`, `cut-list.csv`,
+  `drawing-brief.md`, and `validation.csv` agree on pending-measurement
+  authority.
+- Confirm no CAD, DXF, CAM, dimension, or tuning value is being used without
+  reviewed or measured evidence.
+- Photograph future setup evidence according to `photo-shotlist.md`.
 
-- CNC / laser / lathe / hand tools:
-- Measuring tools:
-- Workholding and fixtures:
-- Safety equipment:
+## Gate Phases
 
-## Build Phases
+1. Review Phase-1 CAD/workbook configuration.
+2. Record material and stock evidence.
+3. Define and document fixture datums.
+4. Cut and measure same-material coupons.
+5. Run first-article or sacrificial slot checks.
+6. Capture as-cut strike data.
+7. Capture post-trim strike data.
+8. Update model and authority register from real evidence.
 
-1. Source and inspect materials.
-2. Prepare rough stock and test coupons.
-3. Build fixtures/templates and verify datums.
-4. Machine or form primary parts.
-5. Dry fit hardware and sound-producing elements.
-6. Assemble with reversible checks where possible.
-7. Tune, trim, tension, or adjust.
-8. Finish, cure, and re-check tuning/fit.
-9. Document final measurements and build notes.
+## Stop Rules
 
-## Photo / Diagram Placeholders
-
-- `../../assets/images/01-materials.jpg`
-- `../../assets/images/02-fixture-setup.jpg`
-- `../../assets/images/03-machining.jpg`
-- `../../assets/images/04-dry-fit.jpg`
-- `../../assets/images/05-assembly.jpg`
-- `../../assets/images/06-validation.jpg`
-
-## Maintenance / Setup Notes
-
-- Tuning/setup:
-- Seasonal humidity/temperature notes:
-- Replaceable wear parts:
-- Storage and transport:
+- Stop before cutting if fixture datum or material evidence is missing.
+- Stop before slot release if kerf coupon evidence is missing.
+- Stop before tuning claims if strike protocol or measurement setup is missing.
+- Stop before L3 promotion if any visual-output register row remains
+  `pending_measurement` for a build-critical artifact.

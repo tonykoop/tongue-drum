@@ -2,44 +2,38 @@
 
 Instrument ID: TNG-001
 Instrument: Tongue drum
-Revision/date: REV-A / 2026-05-02
+Status: L2 V5 build-packet candidate
 
-## Reference Style
+## Authority
 
-Use Tony's Ashiko visual BOM as the preferred pattern:
-
-```text
-C:/Users/Tony/Documents/GitHub/ashiko-drum-workshop/../../assets/images/figure-bom-v2.png
-/mnt/c/Users/Tony/Documents/GitHub/ashiko-drum-workshop/../../assets/images/figure-bom-v2.png
-```
+This brief is communication-only. Future visual BOM images are `concept_only`
+unless they are generated from reviewed fabrication authority and recorded as
+`derived_preview` in `visual-output-register.csv`.
 
 ## Layout
 
-- Header: assembly name, quote date, estimated cost, revision.
-- Hero image: finished assembly or best current render/photo.
-- Main table columns: Part #, Part Name, Description, Qty, Units, Picture, Cost Each, Total.
-- Alternating row fills for readability.
-- Bottom notes: supplier assumptions, material species, discounts, substitutions, and TBDs.
+- Header: packet name, revision, readiness, and authority.
+- Hero image: reference photo or concept image clearly labeled non-dimensional.
+- Main table columns: part ID, part name, gate status, authority, source, notes.
+- Bottom notes: unresolved material, sourcing, measurement, and review gates.
 
 ## Image Rules
 
-- Prefer real part photos, supplier images, CAD renders, or shop photos.
-- Generated part images are allowed as placeholders, but label them as concept/placeholder.
-- Keep image thumbnails consistent in crop and scale where possible.
-- Do not infer dimensions from generated images.
+- Existing photos are `reference_only`.
+- Generated images are `concept_only`.
+- Supplier images are `reference_only` until reviewed against purchased parts.
+- Do not infer dimensions, tuning data, tolerances, or costs from any image.
 
-## Needed Images
+## Needed Future Images
 
-- Finished assembly / hero:
-- Primary material:
-- Sound-producing elements:
-- Hardware:
-- Rope/lacing/strings/reeds/skin/head:
-- Finish/consumables:
-- Fixtures/templates:
+- Phase-1 stock with scale and material-batch note.
+- Fixture and datum setup.
+- Kerf coupon before and after cut.
+- First-article slot sample.
+- Strike measurement setup.
+- As-cut and post-trim tongue evidence.
 
 ## Output Targets
 
-- `../../assets/images/visual-bom.png`
-- `../../assets/images/visual-bom.pdf`
-- Source workbook/sheet or editable design file:
+Output targets are pending until the visual authority register has reviewed
+source rows. No visual BOM image is required for this R2 gate scaffold.

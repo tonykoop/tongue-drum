@@ -1,33 +1,31 @@
-(* Instrument-maker build-packet Wolfram starter. *)
+(* TNG-001 tongue drum V5 source-only gate stub.
+
+   This file intentionally contains no tuning constants, target frequencies,
+   measured frequencies, CAD dimensions, or computed geometry. It has not been
+   executed. Future Wolfram work must import reviewed packet rows and commit an
+   execution log before making runtime claims. *)
 
 ClearAll["Global`*"];
 
-design = <|
+packetStatus = <|
   "InstrumentID" -> "TNG-001",
-  "Family" -> "Drums",
-  "InstrumentType" -> "Tongue drum",
-  "VariantSize" -> "Small (magazine baseline)",
-  "KeyScale" -> "D minor / A minor",
-  "PrimaryMaterial" -> "Steel or hardwood top",
-  "DesignSheet" -> "Tongue Drum",
-  "DesignWorkbook" -> "/sessions/busy-sleepy-volta/mnt/Career/flutes-staging/Flutes-AI.xlsx",
-  "Units" -> "Imperial",
-  "A4" -> 440,
-  "SpeedOfSoundInPerSec" -> 13552
+  "Readiness" -> "L2 V5 build-packet candidate",
+  "Authority" -> "concept_only",
+  "GeometryAuthority" -> "pending_measurement",
+  "TuningAuthority" -> "pending_measurement",
+  "RuntimeStatus" -> "source_only_not_executed"
 |>;
 
-frequencyFromMidi[midi_, a4_: 440] := a4*2^((midi - 69)/12);
-centsError[measured_, target_] := 1200*Log2[measured/target];
-openPipeLengthIn[freq_, c_: 13552, radius_: 0] := c/(2*freq) - 2*0.6*radius;
-stoppedPipeLengthIn[freq_, c_: 13552, radius_: 0] := c/(4*freq) - 0.6*radius;
-cantileverLengthIn[freq_, thickness_, k_] := Sqrt[k*thickness/freq];
+requiredInputs = {
+  "reviewed_cad_configuration",
+  "measured_or_reviewed_dimension_table",
+  "material_batch_record",
+  "cnc_coupon_results",
+  "strike_measurement_protocol",
+  "as_cut_strike_log",
+  "post_trim_strike_log"
+};
 
-CreateDocument[
-  {
-    TextCell[design["InstrumentID"] <> " - " <> design["InstrumentType"], "Title"],
-    TextCell["Build-packet computational design notebook", "Subtitle"],
-    ExpressionCell[design, "Input"],
-    TextCell["Add imported design rows, Manipulate controls, plots, audio, 3D geometry, and validation cells below.", "Text"]
-  },
-  WindowTitle -> design["InstrumentID"]
-]
+missingInputQ[input_] := True;
+
+packetStatus

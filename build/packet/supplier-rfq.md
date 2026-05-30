@@ -1,28 +1,22 @@
 # Supplier RFQ Draft
 
-Subject: RFQ for Tongue drum prototype components - TNG-001
+Status: hold until sourcing gates close.
 
-Hello,
+Do not send this RFQ from the current packet state. The packet does not yet
+contain reviewed dimensions, material specs, quantity requirements, or tuning
+targets.
 
-I am sourcing components for a musical-instrument prototype:
+## Required Before Sending
 
-- Instrument: Tongue drum
-- Variant/size: Small (magazine baseline)
-- Key/scale: D minor / A minor
-- Primary material: Steel or hardwood top
+- Reviewed Phase-1 CAD/workbook configuration.
+- Material batch/spec requirements.
+- Stock envelope and thickness requirements from measured or reviewed evidence.
+- CNC process requirements after coupon and first-article gates.
+- Finish/contact requirements.
+- Current supplier, price, lead-time, and shipping checks.
 
-Could you quote the items listed in `sourcing.csv` or recommend compatible alternatives?
+## Draft Scope
 
-Please include:
-
-- Unit price and any volume breaks
-- Minimum order quantity
-- Current stock status
-- Lead time
-- Shipping estimate to my location
-- Material/spec sheet or drawing if available
-- Notes on acceptable substitutions or constraints
-
-Thank you,
-
-Tony
+When the gates above are complete, ask suppliers only for reviewed specs from
+`sourcing.csv`. Do not ask them to quote concept-only dimensions or unresolved
+tuning targets.

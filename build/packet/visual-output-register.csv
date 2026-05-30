@@ -1,6 +1,10 @@
-artifact_id,path,artifact_kind,role,authority,dimension_claim,derived_from,fabrication_required,notes
-VIZ-001,build/packet/phase1-cad-cnc-tuning-gate-plan.md,markdown,plan,reference_only,none,phase1-geometry-gates.csv,false,Intent and gate scaffold only; not fabrication authority
-VIZ-002,build/packet/phase1-geometry-gates.csv,csv,control-table,reference_only,none,build/cad/phase1-dimensions-map.csv,false,CAD gate table for phase-1 planning and boundary control
-VIZ-003,build/cad/phase1-dimensions-map.csv,csv,dimension-table,reference_only,all rows pending,CAD dimensions csv,false,Traceable table of Small_Baseline_6T planned dimensions
-VIZ-004,build/packet/phase1-tuning-capture.csv,csv,tuning-data,reference_only,rows pending,tune capture log,false,Seed row copied from phase-1 baseline measurement template
-VIZ-005,build/cnc/phase1-cnc-gates.csv,csv,shop-gates,reference_only,none,cnc-gate table,false,Prototype shop readiness gates before first-article or production cutting
+artifact_id,path,artifact_kind,role,authority,dimension_claim,derived_from,fabrication_required,review_status,notes
+V5-REG-001,build/packet/README.md,markdown,packet-index,concept_only,none,local V5 scaffold,false,self_checked,"Packet index and readiness statement only."
+V5-REG-002,build/packet/phase1-cad-cnc-tuning-gate-plan.md,markdown,gate-plan,concept_only,none,V5 standard,false,self_checked,"Gate definitions only; no CAD geometry or tuning values."
+V5-REG-003,build/cad/phase1-dimensions-map.csv,csv,cad-measurement-map,pending_measurement,blocked until reviewed or measured,CAD/workbook inventory,false,unreviewed,"Feature classes are named; values intentionally omitted."
+V5-REG-004,build/packet/phase1-geometry-gates.csv,csv,cad-gate-table,pending_measurement,blocked until reviewed or measured,phase1-dimensions-map.csv,false,unreviewed,"Defines CAD evidence gates; not fabrication authority."
+V5-REG-005,build/cnc/phase1-cnc-gates.csv,csv,cnc-gate-table,pending_measurement,blocked until coupon and fixture evidence exists,shop review,false,unreviewed,"Defines CNC readiness gates; no toolpaths or coordinates."
+V5-REG-006,build/packet/phase1-tuning-capture.csv,csv,tuning-gate-table,pending_measurement,blocked until strike logs exist,measurement protocol,false,unreviewed,"Defines tuning capture gates; no target or measured frequencies."
+V5-REG-007,build/cad/cad-mcp-session-log.md,markdown,tool-provenance,concept_only,none,no MCP session,false,self_checked,"Documents that no MCP/CAD authoring tools were available in this run."
+V5-REG-008,assets/images/,image-set,reference-photos,reference_only,none,existing repo photos,false,unreviewed,"Reference photos only; not dimensional evidence."
+V5-REG-009,build/packet/wolfram-starter.wl,wolfram,source-only-model-stub,concept_only,none,gate definitions,false,self_checked,"Source-only placeholder; not executed and no numeric tuning constants."

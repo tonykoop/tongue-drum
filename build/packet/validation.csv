@@ -1,11 +1,8 @@
-Check #,Feature / Test,Target,Unit,Tolerance,Source,Measured 1,Measured 2,Measured 3,Environment,Result,Action / Notes
-1,A4 frequency reference,440,Hz,Exact formula sanity check,acoustic-models.md,,,,TBD,,
-2,Overall envelope,Small (magazine baseline),in,TBD,drawing-brief.md,,,,TBD,,
-3,Tongue drum tuning targets,D minor / A minor,Hz/cents,TBD,design sheet,,,,Temp/humidity TBD,,
-4,Critical fit hardware,All purchased/made parts fit,pass/fail,No forced fit,bom.csv and drawings,,,,Shop,,
-5,Finish and contact safety,Compatible with use,pass/fail,No tack/odor/skin issue,sourcing.csv,,,,Shop,,
-
-6,Phase-1 CAD/CNC gate plan,phase1-geometry-gates.csv,open,No fabrication claim; planning-only scope,build/packet/phase1-geometry-gates.csv,,,,,open,Fill each gate with evidence before any cutting step
-7,CNC gating,phase1-cnc-gates.csv,open,No slot profile release until gate closure,build/cnc/phase1-cnc-gates.csv,,,,,open,"Require kerf, fixture, and first-article evidence"
-8,Tuning capture,phase1-tuning-capture.csv,open,Prototype tuning and correction tracking is seeded but incomplete,build/packet/phase1-tuning-capture.csv,,,,,open,Add pre/post-trim per tongue set
-9,Artifact authority,build/packet/visual-output-register.csv,pass,Visual assets are reference-only by contract,build/packet/visual-output-register.csv,,,,,pass,Keep images and logs out of fabrication authority
+check_id,feature_or_test,gate_definition,unit_policy,tolerance_policy,source,measured_value_policy,environment_policy,result,action_notes
+VAL-001,V5 readiness,"Packet status is L2 V5 build-packet candidate and not build-ready.",n/a,n/a,build/packet/README.md,no measured value allowed,n/a,open,"Review for forbidden L3 or fabrication-authority language."
+VAL-002,CAD configuration,"Exact Phase-1 CAD/workbook configuration must be reviewed before dimensions enter the packet.",declared by source,defined during review,build/cad/phase1-dimensions-map.csv,pending measurement,n/a,open,"No CAD value is accepted in this lane."
+VAL-003,Geometry gates,"Each tuning-critical feature class has an evidence gate before values are allowed.",declared by source,defined during review,build/packet/phase1-geometry-gates.csv,pending measurement,n/a,open,"No DXF coordinate or CAD geometry claim."
+VAL-004,CNC gates,"Fixture cutter kerf coupon and first-article evidence must exist before cutting authority.",declared by shop,defined during shop review,build/cnc/phase1-cnc-gates.csv,pending measurement,shop environment pending,open,"No CAM or toolpath claim."
+VAL-005,Tuning gates,"Target system strike protocol measurement setup as-cut capture trim capture and model update gates are defined.",declared by tuning plan,defined during tuning review,build/packet/phase1-tuning-capture.csv,pending measurement,capture environment pending,open,"No target or measured frequencies."
+VAL-006,Artifact authority,"Every visual output row is concept_only reference_only or pending_measurement.",n/a,n/a,build/packet/visual-output-register.csv,no measured value allowed,n/a,open,"Do not promote to fabrication until evidence exists."
+VAL-007,Runtime evidence,"Wolfram source exists only as an unexecuted gate stub.",n/a,n/a,build/packet/wolfram-starter.wl,no runtime result allowed,n/a,open,"Execution logs are required before computational claims."

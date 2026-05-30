@@ -1,14 +1,8 @@
-feature_id,feature_name,value_mm,value_in,source_file,equation_or_comment,authority,status
-T01,drum_len,457.2,18.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"MASTER_TEMPLATE/SK_OUTER_BOX/drum_len_in_sketch@SK_OUTER_BOX",reference_only,blocked_pending_shop_capture
-T02,drum_wid,254.0,10.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"MASTER_TEMPLATE/SK_OUTER_BOX/drum_wid_in_sketch@SK_OUTER_BOX",reference_only,blocked_pending_shop_capture
-T03,top_thk,12.7,0.5000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"MASTER_TEMPLATE/SK_HEIGHT_STACK/top_thk_in_sketch@SK_HEIGHT_STACK",reference_only,blocked_pending_shop_capture
-T04,cavity_hgt,127.0,5.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"MASTER_TEMPLATE/SK_HEIGHT_STACK/cavity_hgt_in@SK_HEIGHT_STACK",reference_only,blocked_pending_shop_capture
-T05,slit_kerf,1.905,0.0750,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 7] slit_kerf_in",reference_only,blocked_pending_cnc_compensation
-T06,slit_end_rad,6.35,0.2500,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 8] slit_end_rad_in",reference_only,blocked_pending_cnc_compensation
-T07,tongue_root_gap,1.524,0.0600,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 9] tongue_gap_in",reference_only,blocked_pending_shop_capture
-T08,t01_len,216.519,8.5244,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"T01_6TMagazineBaseline D22, [Equation 27] t01_len_in",reference_only,blocked_pending_tuning_capture
-T09,t02_len,218.440,8.6000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"T06_6TMagazineBaseline D13, [Equation 53] t02_len_in",reference_only,blocked_pending_tuning_capture
-T10,t03_len,152.400,6.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"T03_6TMagazineBaseline D2, [Equation 54] t03_len_in",reference_only,blocked_pending_tuning_capture
-T11,t04_len,149.860,5.9000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 55] t04_len_in",reference_only,blocked_pending_tuning_capture
-T12,t05_len,160.020,6.3000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"T05_6TMagazineBaseline D3, [Equation 56] t05_len_in",reference_only,blocked_pending_tuning_capture
-T13,t06_len,203.200,8.0000,cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv,"[Equation 57] t06_len_in",reference_only,blocked_pending_tuning_capture
+feature_id,feature_class,required_definition,source_to_review,evidence_required,authority,status,blocked_claim
+CAD-MAP-001,configuration_identity,"Name the exact Phase-1 CAD/workbook configuration before any row is used.",CAD/workbook inventory,"review note with file path revision and configuration name",pending_measurement,open,"No Phase-1 geometry can be released."
+CAD-MAP-002,envelope_and_datums,"Define body envelope datum scheme and units.",CAD model or reviewed drawing,"reviewed dimension table or measured template",pending_measurement,open,"No stock sizing or fixture envelope can be claimed."
+CAD-MAP-003,top_and_shell_stack,"Define top thickness shell wall stack and interface datum.",CAD model measured stock or reviewed drawing,"measured stock record and reviewed drawing reference",pending_measurement,open,"No slot depth or stiffness claim can be made."
+CAD-MAP-004,slit_width_and_end_radius,"Define slit width end radius and root relief measurement method.",CAD model CAM setup or coupon plan,"reviewed CAD row plus kerf coupon result",pending_measurement,open,"No slot toolpath or stress-relief claim can be made."
+CAD-MAP-005,tongue_layout,"Define tongue IDs lengths widths tips roots and strike-zone references.",CAD model or measured template,"reviewed layout table with one row per tongue",pending_measurement,open,"No tuning geometry or note mapping can be claimed."
+CAD-MAP-006,material_batch,"Define material species batch thickness moisture and orientation records.",shop stock record,"batch note moisture/orientation check and photo reference",pending_measurement,open,"No acoustic model input can be claimed."
+CAD-MAP-007,revision_traceability,"Tie CAD drawings CAM and tuning logs to one revision ID.",repo revision and future shop log,"revision note in packet README and validation loop",pending_measurement,open,"No downstream evidence can be merged into fabrication authority."

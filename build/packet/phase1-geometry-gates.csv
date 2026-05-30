@@ -1,7 +1,8 @@
-phase_gate_id,scope,feature,target_reference,source_file,required_action,status,stop_condition
-PCG-001,CAD Envelope,Overall envelope,Small_Baseline_6T,build/cad/phase1-dimensions-map.csv,Confirm overall body dims from phase-1 CAD row set and map to workshop envelope,open,Do not finalize pocket sizes from CAD images alone
-PCG-002,CAD Tuning geometry,Slot width,build/cad/phase1-dimensions-map.csv,Record `slit_kerf_in` and keep kerf compensation open in CNC table,open,No CNC cut before compensation and calibration gate passes
-PCG-003,CAD Tuning geometry,Tongue-tip radius,build/cad/phase1-dimensions-map.csv,Confirm slit-end radius in CAD table and require shop test plan,open,No tuning claim before repeated strike capture
-PCG-004,CAD Tuning geometry,Body thickness,build/cad/phase1-dimensions-map.csv,Track top/thickness values as phase-1 planning inputs,open,Do not treat these values as final fabrication authority
-PCG-005,CAD Tuning geometry,Tongue lengths,build/cad/phase1-dimensions-map.csv,Bind first six review tongue lengths to tuning IDs (t01..t06),open,No final tuning profile before strike log and correction analysis
-PCG-006,CNC Shop,Workholding datum,build/cnc/phase1-cnc-gates.csv,Create fixture/data capture pass for datum consistency,open,No prototype cuts until datum gate completes
+gate_id,domain,feature_class,gate_definition,evidence_required,authority_until_closed,status,stop_condition
+GEOM-001,CAD,configuration_identity,"Confirm the exact Phase-1 configuration and revision before using any geometry row.","Reviewed source file path revision and configuration name.",pending_measurement,open,"Stop if CAD/workbook/config names disagree."
+GEOM-002,CAD,envelope_and_datums,"Define envelope units primary datum secondary datum and measurement method.","Reviewed drawing table or measured template record.",pending_measurement,open,"Stop before fixture stock or body envelope release."
+GEOM-003,CAD,top_shell_stack,"Define top shell stack and material-thickness measurement method.","Measured stock record plus reviewed CAD/drawing source.",pending_measurement,open,"Stop before slot-depth or stiffness claims."
+GEOM-004,CAD,slit_geometry,"Define slit width end radius root gap and edge-condition checks.","Kerf coupon plan and reviewed geometry source.",pending_measurement,open,"Stop before DXF/CAM export or stress-relief claims."
+GEOM-005,CAD,tongue_layout,"Define one tongue ID per planned tongue and bind it to geometry and tuning records.","Reviewed tongue layout table; no values until measured/reviewed.",pending_measurement,open,"Stop before target-note or tuning-frequency assignment."
+GEOM-006,CAD,material_inputs,"Define material batch orientation moisture and density evidence needed by the model.","Shop stock record and measurement method.",pending_measurement,open,"Stop before applying acoustic constants or correction factors."
+GEOM-007,CAD,release_review,"Define the review checklist required to promote one geometry row to fabrication authority.","Signed or dated review note plus linked evidence artifacts.",pending_measurement,open,"Stop if any row remains concept-only or unreviewed."

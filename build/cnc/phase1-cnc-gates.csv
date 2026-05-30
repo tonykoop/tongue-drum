@@ -1,7 +1,7 @@
-cnc_gate_id,phase,scope,entry_evidence,required_action,pass_criteria,stop_condition,status
-CG-001,P0,Workholding datum,build/packet/phase1-geometry-gates.csv,Create/confirm datum plan and zero reference for body centerline,fixture origin and edge references documented and reproducible,Any cut cannot proceed with unresolved datum alignment,open
-CG-002,P0,Cutter compensation,build/cad/phase1-dimensions-map.csv,Record cutter radius/bit width compensation plan and estimate kerf spread,Compensation row completed and accepted in build/cnc/phase1-cnc-gates.csv,No CNC slot width may be set from slot model alone,open
-CG-003,P0,Kerf coupons,build/packet/phase1-tuning-capture.csv,Cut labeled coupons for kerf and edge condition check,Coupon notes and post-cut dimensions recorded,No tuning cuts until coupon pass criteria met,open
-CG-004,P1,Fixture plan,build/cnc/phase1-cnc-gates.csv,Prepare spoilboard registration and clamp layout for 2-side access,Fixture IDs and clamp points recorded,Any fixture that distorts centerline requires redesign,open
-CG-005,P1,Bit/tool audit,workshop logs,Confirm tooling/material for wood/steel mix envelope,Appropriate tool and coolant strategy logged and validated in shop review,Unsafe cutter/tool unknown,open
-CG-006,P1,First-article fit,build/packet/phase1-tuning-capture.csv,Run first-article tongue slot mock pass before full panel cut,Pass/fail with measured deviation and notes,Any oversized/undersize pass requiring unknown correction,open
+cnc_gate_id,phase,scope,gate_definition,evidence_required,authority_until_closed,status,stop_condition
+CNC-001,P0,fixture_datum,"Define spoilboard fixture datum centerline registration and clamp keepout zones.","Fixture sketch or reviewed setup sheet plus photo after setup.",pending_measurement,open,"No CNC setup or slot path release."
+CNC-002,P0,cutter_and_kerf,"Define cutter type bit width kerf compensation and acceptable edge condition.","Tool record plus same-material kerf coupon measurement.",pending_measurement,open,"No slit width or radius can be taken from CAD alone."
+CNC-003,P0,stock_preparation,"Define stock flatness thickness moisture grain/orientation and defect checks.","Shop stock record and pre-cut inspection note.",pending_measurement,open,"No tuning or stiffness assumption can be used."
+CNC-004,P1,coupon_cut,"Define same-material coupon cuts for slot width end radius tearout and cleanup.","Coupon ID photos measured result and pass/fail note.",pending_measurement,open,"No full top or shell cut."
+CNC-005,P1,first_article,"Define first-article path dry run or sacrificial cut before the real panel.","First-article record with deviations and adjustment note.",pending_measurement,open,"No production body or tuned tongue cut."
+CNC-006,P1,revision_link,"Define how CAM file fixture setup and tuning log share a revision ID.","Revision entry in validation loop and packet README.",pending_measurement,open,"No promoted fabrication-authority row."
