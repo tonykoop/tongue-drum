@@ -1,5 +1,7 @@
 # Tongue Drum — Engineering Documentation for Slit-Drum Builds
 
+Status: L2 V5 build-packet candidate.
+
 > *Three planned tongue drums — one to a published magazine plan, two original designs — and a design-of-experiments protocol for predicting each tongue's musical key from the geometry, material, and excitation.*
 
 ![Hero — magazine cover photo of a six-tongue tongue drum being struck by mallets](assets/images/img20260426_00430913.png)
