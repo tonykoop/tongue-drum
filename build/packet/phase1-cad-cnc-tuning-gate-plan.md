@@ -1,50 +1,92 @@
-# Phase 1 CAD/CNC/Tuning Gate Packet (Issue #4)
+# Phase 1 CAD/CNC/Tuning Gate Packet
 
-Status: L2 packet scaffold for prototype planning.
+Status: L2 V5 build-packet candidate.
 
-This packet maps the phase-1 Small_Baseline_6T CAD geometry to explicit shop and tuning gates. It preserves prototype readiness by separating planning rows from fabrication authority.
+Issue scope: Refs #4.
 
-## Scope and non-claims
+This packet defines the Phase-1 gate surface for the small tongue-drum
+prototype. It does not publish CAD geometry, DXF coordinates, toolpaths,
+measured dimensions, or tuning frequencies. Every CAD, CNC, and acoustic row is
+either a gate definition or a pending-measurement placeholder.
 
-- Phase-1 scope is the magazine-baseline small drum only (`Small_Baseline_6T` config).
-- Medium/large designs remain future work and are not used for fabrication gates in this lane.
-- No file added here is treated as build-ready CAD/CNC authority.
-- Geometry rows are named and traceable, but cutting dimensions remain **gated** until shop and tuning evidence are completed.
+## Authority Boundary
 
-## Phase-1 CAD authority map
+- No artifact in this lane is fabrication authority.
+- Existing CAD files and workbook references are inventory sources only until a
+  human review or measurement pass promotes a specific row.
+- Existing photos are reference-only and cannot be used to infer dimensions.
+- Tuning rows define what evidence must be captured; they do not name target
+  notes, target frequencies, measured frequencies, or correction values.
+- Wolfram files are source-only stubs and have not been executed.
+- No MCP, SolidWorks, OpenSCAD, Illustrator, Blender, CNC, or measurement tool
+  was available in this run.
 
-- `build/cad/phase1-dimensions-map.csv` records the Small_Baseline_6T geometry rows used for review.
-- `build/packet/phase1-geometry-gates.csv` records per-feature control gates.
-- `build/packet/visual-output-register.csv` tracks artifact authority intent.
-- `build/packet/validation-loop.csv` tracks status of CAD/CNC/tuning gates.
+## V5 Surface
 
-## Preserved prototype readiness rules
+| Surface | File | Authority |
+| --- | --- | --- |
+| Packet status and artifact inventory | `build/packet/README.md` | concept_only |
+| Visual/output authority register | `build/packet/visual-output-register.csv` | pending_measurement |
+| CAD feature gate definitions | `build/packet/phase1-geometry-gates.csv` | pending_measurement |
+| CAD measurement map | `build/cad/phase1-dimensions-map.csv` | pending_measurement |
+| CNC readiness gates | `build/cnc/phase1-cnc-gates.csv` | pending_measurement |
+| Tuning capture gates | `build/packet/phase1-tuning-capture.csv` | pending_measurement |
+| Validation state | `build/packet/validation.csv` and `build/packet/validation-loop.csv` | pending_measurement |
+| MCP/tool provenance stub | `build/cad/cad-mcp-session-log.md` | concept_only |
 
-1. Keep the prototype path open: no closed-loop release is inferred from CAD placeholders.
-2. Require evidence rows before moving from review to release-level execution.
-3. Use captured shop gates as the bridge from `reference_only` CAD/CAD/CNC planning to controlled prototype cuts.
-4. Add measured tuning evidence before declaring any tuned geometry authoritative.
+## Gate Families
 
-## Required gate rows (live)
+### CAD Gates
 
-- CAD: geometry table values from `cad/TNG-000_TongueDrum_ALL_CONFIGS_dimensions.csv` are listed in `phase1-dimensions-map.csv`.
-- CNC: shop/fixture/gauge gates live in `build/cnc/phase1-cnc-gates.csv`.
-- Tuning: measured capture rows in `phase1-tuning-capture.csv` are seeded from `docs/study/data-template.csv` and remain open.
+CAD gates define which feature classes must be checked before a geometry row
+can be trusted:
 
-## Readiness boundary
+- envelope and datums;
+- material thickness and top/shell interface;
+- slit width, end radius, and root gap;
+- tongue length, width, tip shape, and relief geometry;
+- drawing-to-CAD-to-shop traceability;
+- revision and configuration identity.
 
-This packet remains L2-style evidence scaffolding until the following are true:
+The gate passes only when a specific source row is reviewed or measured and the
+reviewer records units, tolerance, source artifact, and evidence path.
 
-- Every open CAD gate in `validation-loop.csv` is complete or closed with evidence.
-- `build/packet/phase1-tuning-capture.csv` includes post-cut measurement data for at least the phase-1 target tongue set.
-- `build/cnc/phase1-cnc-gates.csv` records fixture/workholding and bit-compensation passes.
-- `validation.csv` reflects no unchecked fabrication claims.
+### CNC Gates
 
-## Update plan
+CNC gates define shop evidence required before any cutting claim:
 
-### Immediate next steps
+- stock and material-batch identification;
+- fixture and datum plan;
+- cutter/kerf compensation;
+- coupon and first-article cut;
+- tab, bridge, edge-finish, and tearout checks;
+- repeatability and scrap/stop rules.
 
-1. Fill `build/packet/phase1-tuning-capture.csv` from live strike logs.
-2. Complete `build/cnc/phase1-cnc-gates.csv` with kerf/workholding/first-article actions.
-3. Promote one reviewed CAD/CNC sheet/row into a future fabrication-authority register only after all `phase-1` gates pass.
-4. Keep `validation.csv` and `validation-loop.csv` as the governing state surface.
+The gate passes only when the shop records fixture evidence and post-cut checks.
+
+### Tuning Gates
+
+Tuning gates define the measurement loop required before any acoustic authority:
+
+- target system selection;
+- strike protocol;
+- microphone or tuner setup;
+- environment capture;
+- as-cut measurement;
+- trim-pass measurement;
+- cents-error calculation;
+- model update or deviation note.
+
+The gate passes only when the packet includes real strike logs and links each
+result back to a specific tongue, material batch, and geometry revision.
+
+## What Is Needed Next
+
+1. Review the existing CAD/workbook source rows and decide which configuration
+   represents the Phase-1 small drum.
+2. Populate `phase1-dimensions-map.csv` with measured or reviewed values only.
+3. Complete CNC coupon and first-article gates before any slot geometry release.
+4. Capture real tuning data after cutting; then add target and measured values
+   with evidence paths.
+5. Promote individual rows to `fabrication` or `derived_preview` only after the
+   evidence chain exists.

@@ -1,6 +1,8 @@
-val_id,scope,gate_id,check,artifact,status,notes,owner,next_due
-VL-001,CAD,PCG-001,Envelope and bank plan are phase-1 mapped,build/cad/phase1-dimensions-map.csv,open,Medium-accuracy envelope map required before production,Round-23 lane owner,2026-05-18
-VL-002,CAD,CG-002,Kerf and radius compensation are quantified,build/cnc/phase1-cnc-gates.csv,open,Require compensated kerf plan before first slot path export,Round-23 lane owner,2026-05-18
-VL-003,CNC,CG-004,Fixture and workholding registration validated,build/cnc/phase1-cnc-gates.csv,open,No full panel CAM release until fixture audit closes,Round-23 lane owner,2026-05-19
-VL-004,Tuning,TUNE-001,Seed strike evidence recorded and replayable,docs/study/data-template.csv,open,One baseline row exists; full phase plan still pending,Round-23 lane owner,2026-05-19
-VL-005,Evidence,visual-output-register.csv,Visual/output artifacts marked reference-only,build/packet/visual-output-register.csv,open,No artifact in this lane currently has fabrication authority,Round-23 lane owner,2026-05-19
+val_id,scope,gate_id,check,artifact,status,authority,notes,owner,next_due
+VL-001,V5 surface,V5-REG-001,Packet README exists and states L2 pending-measurement authority,build/packet/README.md,open,concept_only,"Review before PR; no build-ready language.",R2 lane owner,pending
+VL-002,CAD,GEOM-001,Configuration identity gate defined,build/packet/phase1-geometry-gates.csv,open,pending_measurement,"Values intentionally omitted until source review.",R2 lane owner,pending
+VL-003,CAD,CAD-MAP-005,Tongue layout measurement map defined,build/cad/phase1-dimensions-map.csv,open,pending_measurement,"No tongue lengths notes or frequencies recorded.",R2 lane owner,pending
+VL-004,CNC,CNC-002,Cutter and kerf gate defined,build/cnc/phase1-cnc-gates.csv,open,pending_measurement,"No toolpath or slot width release.",R2 lane owner,pending
+VL-005,Tuning,TUNE-GATE-001,Tuning target-system gate defined,build/packet/phase1-tuning-capture.csv,open,pending_measurement,"No target notes target Hz measured Hz or cents values recorded.",R2 lane owner,pending
+VL-006,Provenance,R2-2026-05-29-local,MCP/tool unavailability recorded,build/cad/cad-mcp-session-log.md,open,concept_only,"No external CAD or measurement session occurred.",R2 lane owner,pending
+VL-007,Risk,RISK-001,Remaining fabrication and acoustic blockers are named,build/packet/risks.md,open,concept_only,"Risks block L3 promotion.",R2 lane owner,pending

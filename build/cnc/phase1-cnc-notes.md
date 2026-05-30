@@ -1,9 +1,15 @@
 # Phase-1 CNC Readiness Notes
 
-Use these notes as the required shop precondition before any prototype cut.
+Status: gate definitions only.
 
-- Verify spoilboard flatness and zero references on first setup.
-- Cut and measure kerf coupons on the same materials and tooling planned for phase-1 prototypes.
-- Check workholding method for both tuning and replacement operations.
-- Record first-article outcome before full-body processing.
-- Keep all rows in `phase1-cnc-gates.csv` updated with status and pass notes.
+These notes define what must be proven before prototype cutting. They are not a
+CAM plan, toolpath, DXF coordinate set, or machine setup sheet.
+
+- Verify fixture datum, stock orientation, clamp keepouts, and repeatable
+  zeroing before any cut.
+- Cut and measure same-material kerf coupons before slot geometry is promoted.
+- Record cutter, bit, feed/speed source, cleanup method, and edge condition in
+  the CNC gate table.
+- Run a first-article or sacrificial pass before cutting a real top or body
+  panel.
+- Keep every CNC row at `pending_measurement` until shop evidence is committed.
