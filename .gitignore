@@ -56,3 +56,6 @@ dkms.conf
 
 # Stash-recovery sidecars
 stash-recovered-*/
+
+# Copyrighted WOOD Magazine plan scans — kept locally, never tracked (see ATTRIBUTION.md)
+assets/images/img20260426_*.png
