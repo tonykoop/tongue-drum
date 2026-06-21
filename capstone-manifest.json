@@ -1,0 +1,36 @@
+{
+  "packet_dir": ".",
+  "title": "Tongue Drum — Engineering Documentation for Slit-Drum Builds — Starter Packet",
+  "instrument": "tongue drum",
+  "build_target": "tongue drum reference scaffold",
+  "artifact_focus": "idiophones instrument starter packet",
+  "generated": "2026-06-21",
+  "readiness": "starter",
+  "release_status": "private / starter scaffold",
+  "fabrication_authority": {
+    "current_status": "starter scaffold — not for fabrication",
+    "generated_images_allowed_as_authority": false,
+    "wolfram_allowed_as_authority": false
+  },
+  "engineering": {
+    "wolfram": [
+      {
+        "source_file": "idiophones/tongue-drum/build/packet/tongue-drum-packet-starter.wl",
+        "cloud_path": "Musical_Instruments/idiophones/tongue-drum/tongue-drum-packet-starter.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/idiophones/tongue-drum/tongue-drum-packet-starter.wl",
+        "permission": "Public-Execute",
+        "kind": "acoustics-starter"
+      },
+      {
+        "source_file": "idiophones/tongue-drum/build/packet/wolfram-starter.wl",
+        "cloud_path": "Musical_Instruments/idiophones/tongue-drum/wolfram-starter.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/idiophones/tongue-drum/wolfram-starter.wl",
+        "permission": "Public-Execute",
+        "kind": "acoustics-starter"
+      }
+    ]
+  },
+  "files_included": [
+    "README.md"
+  ]
+}
