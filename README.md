@@ -61,6 +61,7 @@ tongue-drum/
 ├── LICENSE
 ├── assets/                     # images, thumbnails, recordings
 ├── build/                      # packet, presentation, CAD/CNC, drawings, data
+├── evolution/                  # StudioPipeline evolution-pipeline Stage 0 intake (master manifest, design-intent, revisions)
 ├── docs/                       # attribution, provenance, research, manifests
 ├── tools/                      # repo-specific generators or analysis scripts
 └── .gitignore
