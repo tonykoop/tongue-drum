@@ -1,0 +1,42 @@
+{
+  "product": "tongue-drum",
+  "pipeline": "studiopipeline:evolution-pipeline",
+  "stage": "0-intake",
+  "master_revision": "rev-A (pre-commit intake, 2026-07-01)",
+  "generated": "2026-07-01",
+  "cad_masters": [
+    {
+      "path": "cad/TNG-000_TongueDrum.SLDASM",
+      "format": "solidworks-assembly",
+      "sha256": "59df7300ef5db4454bb3a1fa6add57f762f1d1f5fc28645526a7674bdc8ae13b",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Existing SolidWorks assembly = CAD master of record. Deliberately NOT promoted/interpreted (design.md non-claims); tongue geometry stays pending_measurement."
+    },
+    {
+      "path": "cad/TNG-000_MasterLayout.SLDPRT",
+      "format": "solidworks-part",
+      "sha256": "bf650e80537b9d0641c39c58863385959014c2ceabe5374a4185dd70297b8eb4",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Master layout part driving the assembly datums."
+    },
+    {
+      "path": "tongue-drum-design-table.xlsx",
+      "format": "design-table",
+      "sha256": "04353e6e4690d7a39c4508882160bf786c2a7c925d54ac774d75ffbe95b9e6aa",
+      "authority": "pending_measurement",
+      "lossy": false,
+      "notes": "Repo-root design table; values not copied/interpreted in this pass."
+    },
+    {
+      "path": "build/packet/wolfram-starter.wl",
+      "format": "wolfram-source",
+      "sha256": "be7dce1dfde04f27e99bdf8bb77f004d8ff3f3e736bca7b8946103385832676b",
+      "authority": "concept_only",
+      "lossy": false,
+      "notes": "Source-only stub; no runtime or numeric tuning claim."
+    }
+  ],
+  "notes": "SolidWorks assembly is the current CAD master of record (Windows-side); no OpenSCAD master authored — the Phase-1 design surface (design.md) explicitly withholds tongue geometry, layout, and target frequencies, so a parametric envelope would fabricate excluded dimensions. No STEP export yet (Windows-side, out of scope this pass). Gate A (Alpha workspace compile) not yet run."
+}
